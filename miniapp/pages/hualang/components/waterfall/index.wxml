@@ -1,0 +1,11 @@
+<scroll-view enable-flex="true" class="container" scroll-y bindrefresherrefresh="refresh" bindscrolltolower="loadMore"
+             refresher-enabled refresher-triggered="{{refreshing}}" refresher-threshold="{{100}}" bindscroll="onScroll">
+  <view wx:for="{{column}}" class="column" wx:key="*this">
+    <view wx:for="{{item.list}}" wx:key="url">
+      <view class="item">
+        <image bind:tap="toDetail" data-id="{{item.id}}" wx:if="{{item.show}}" class="image" mode="aspectFill" src="{{item.url}}" style="width:{{item.width}}rpx;height:{{item.height}}rpx"/>
+        <view wx:else class="image" style="width:{{item.width}}rpx;height:{{item.height}}rpx"></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

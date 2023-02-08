@@ -1,0 +1,13 @@
+<view class="flex-col page">
+  <van-tabs class="section" active="{{activeTab}}" color="#3c9cff" custom-class="tabs_AOVkvzc4" tab-class="tab-item" bindchange="switchTab">
+    <van-tab wx:for="{{tabs}}" wx:key="title" title="{{item.title}}" name="{{index}}"></van-tab>
+  </van-tabs>
+  <waterfall list="{{list}}" bindrefresh="refresh" bindloadmore="loadMore" binddetail="toDetail"/>
+<!--  <scroll-view class="group_4" scroll-y bindrefresherrefresh="refresh" bindscrolltolower="loadMore" refresher-enabled refresher-triggered="{{refreshing}}" refresher-threshold="{{100}}">-->
+<!--    <view class="grid">-->
+<!--      <view class="flex-col grid-item justify-center items-center" wx:key="id" wx:for="{{list}}" data-id="{{item.id}}" bindtap="toDetail">-->
+<!--        <image class="image_6" mode="widthFix" src="{{item.url}}" />-->
+<!--      </view>-->
+<!--    </view>-->
+<!--  </scroll-view>-->
+</view>

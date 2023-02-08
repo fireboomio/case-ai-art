@@ -1,0 +1,54 @@
+.page {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.group_2 {
+  padding: 30rpx 24rpx 24rpx;
+  overflow-y: auto;
+}
+.group_3 {
+  padding: 0 170rpx;
+}
+.text_3 {
+  color: transparent;
+  font-size: 42rpx;
+  font-family: 'PingFang SC';
+  font-weight: 500;
+  line-height: 58rpx;
+  letter-spacing: 7.3rpx;
+  background-image: linear-gradient(89.2deg, #ee5663 0%, #ee5663 -0.34%, #e57848 92.25%, #e57848 100%);
+  -webkit-background-clip: text;
+}
+.image_generated {
+  margin-top: 38rpx;
+  border-radius: 4rpx;
+  width: 600rpx;
+  height: 600rpx;
+}
+.group_4 {
+  margin-top: 136rpx;
+}
+.space-x-19 > view:not(:first-child),
+.space-x-19 > text:not(:first-child),
+.space-x-19 > image:not(:first-child) {
+  margin-left: 38rpx;
+}
+.btn_1,
+.btn_2 {
+  padding: 20rpx 24rpx;
+  border-radius: 4rpx;
+  height: 78rpx;
+  font-size: 28rpx;
+  font-family: 'PingFang SC';
+  line-height: 40rpx;
+  color: #ffffff;
+}
+.btn_1 {
+  background-color: #5ac725;
+}
+.btn_2 {
+  background-color: #3c9cff;
+}

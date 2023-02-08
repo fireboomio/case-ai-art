@@ -1,0 +1,42 @@
+.page {
+  background-color: #f0f0f0;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100%;
+}
+.section {
+  position: relative;
+  background: white;
+}
+.tab-item {
+  width: 100rpx;
+  flex: none !important;
+}
+.group_4 {
+  padding: 10rpx 20rpx 0;
+  height: calc(100vh - 44px);
+}
+.grid {
+  position: relative;
+  column-count: 2;
+  column-gap: 20rpx;
+  padding-bottom: 20rpx;
+}
+.grid-item {
+  padding: 14rpx;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  break-inside: avoid;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  min-height: 240rpx;
+}
+.image_6 {
+  border-radius: 12rpx;
+  width: 100%;
+  height: 100%;
+}
+.tabs_AOVkvzc4 scroll-view {
+  background-color: transparent !important;
+}

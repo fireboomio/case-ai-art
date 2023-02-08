@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/chuangzuo/chuangzuo",
+    "pages/caogaoji/caogaoji",
+    "pages/huajia/huajia",
+    "pages/wode/wode",
+    "pages/xiangqing/xiangqing",
+    "pages/hualang/hualang",
+    "pages/login/index",
+    "pages/help/index",
+    "pages/task/index"
+  ],
+  "tabBar": {
+    "color": "#8B8B8B",
+    "selectedColor": "#070707",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/chuangzuo/chuangzuo",
+      "text": "创作",
+      "iconPath": "assets/tabbar/创作.png",
+      "selectedIconPath": "assets/tabbar/创作-选中.png"
+    }, {
+      "pagePath": "pages/hualang/hualang",
+      "text": "画廊",
+      "iconPath": "assets/tabbar/画廊.png",
+      "selectedIconPath": "assets/tabbar/画廊-选中.png"
+    }, {
+      "pagePath": "pages/huajia/huajia",
+      "text": "画夹",
+      "iconPath": "assets/tabbar/画夹.png",
+      "selectedIconPath": "assets/tabbar/画夹-选中.png"
+    }, {
+      "pagePath": "pages/wode/wode",
+      "text": "我的",
+      "iconPath": "assets/tabbar/我的.png",
+      "selectedIconPath": "assets/tabbar/我的-选中.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

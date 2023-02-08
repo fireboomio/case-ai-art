@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@authing/miniapp-wx": "^5.1.2",
+    "@vant/weapp": "*"
+  }
+}

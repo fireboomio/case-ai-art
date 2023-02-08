@@ -1,0 +1,12 @@
+<view class="flex-col group_6">
+  <view class="flex-row justify-between group_7" bindtap="toggleExpand">
+    <view class="flex-row items-baseline self-center group_8 space-x-4">
+      <text class="font_5">{{icon}}</text>
+      <text class="font_4">{{title}}</text>
+    </view>
+    <image style="{{expanded?'':'transform:rotate(180deg)'}}" class="self-start image_8 image_9" src="../../../../assets/3c26b7b1e4329edcb51873d4c7847cc7.png" />
+  </view>
+  <view wx:if="{{expanded}}" class="flex-row group_1 flex-wrap justify-center">
+    <slot></slot>
+  </view>
+</view>

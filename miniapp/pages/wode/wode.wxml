@@ -1,0 +1,60 @@
+<view class="flex-col page">
+  <view class="flex-col justify-start flex-auto group">
+    <view class="flex-col">
+      <view class="flex-row items-center section space-x-13">
+        <view class="flex-col justify-start items-center image-wrapper">
+          <image class="image_avatar" src="{{userInfo.picture}}" wx:if="{{userId}}"></image>
+          <image bind:tap="goLogin" class="image_6" src="../../assets/fc1525594a4625d0e4a65d0a7be40889.png" wx:else/>
+        </view>
+        <view class="flex-col items-start flex-auto space-y-3">
+          <text class="font_2 text_3">{{userInfo.nickname || ''}}</text>
+          <text class="font_3">ID:{{userId}}</text>
+          <view class="flex-col justify-start items-center text-wrapper_2">
+            <text class="font_3">魔法值:{{points}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="flex-col list section_2">
+        <view
+            bind:tap="goTask"
+            wx:if="{{userId}}"
+            class="flex-row justify-between items-center group_2"
+        >
+          <view class="flex-row items-baseline space-x-4">
+            <text class="font_4">🔥</text>
+            <text class="font_5">获取免费魔法</text>
+            <text class="font_4">🔥</text>
+          </view>
+          <image class="image_7" src="../../assets/006fb358a6faffc10e21eb6408c33c5e.png"/>
+        </view>
+        <!--        <view-->
+        <!--            class="flex-row justify-between items-center group_2"-->
+        <!--        >-->
+        <!--          <view class="flex-row items-baseline space-x-4">-->
+        <!--            <text class="font_5">充值魔法值</text>-->
+        <!--          </view>-->
+        <!--          <image class="image_7" src="../../assets/006fb358a6faffc10e21eb6408c33c5e.png"/>-->
+        <!--        </view>-->
+<!--        <button-->
+<!--            wx:if="{{userId}}"-->
+<!--            class="flex-row justify-between items-center group_2"-->
+<!--            open-type="share"-->
+<!--        >-->
+<!--          <view class="flex-row items-baseline space-x-4">-->
+<!--            <text class="font_5">邀请其他魔法师</text>-->
+<!--          </view>-->
+<!--          <image class="image_7" src="../../assets/006fb358a6faffc10e21eb6408c33c5e.png"/>-->
+<!--        </button>-->
+        <view
+            bind:tap="goHelp"
+            class="flex-row justify-between items-center group_2"
+        >
+          <view class="flex-row items-baseline space-x-4">
+            <text class="font_5">帮助中心</text>
+          </view>
+          <image class="image_7" src="../../assets/006fb358a6faffc10e21eb6408c33c5e.png"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

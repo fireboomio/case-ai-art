@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "AI魔法师",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "loading": "../../components/loading/loading",
+    "waterfall": "./components/waterfall/index"
+  }
+}

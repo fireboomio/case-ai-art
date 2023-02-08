@@ -1,0 +1,25 @@
+<view class="flex-col page">
+  <view wx:if="{{ready}}" class="flex-col flex-auto group_2">
+    <image class="image_7" mode="widthFix" src="{{detail.url}}" bindtap="showImage" />
+    <view class="flex-col space-y-15 group_3">
+      <view class="flex-row justify-between">
+        <text class="font_2 text_3">@{{detail.user.nickname}}</text>
+<!--        <text class="text_jubao">举报</text>-->
+        <view wx:if="{{detail.published}}" class="flex-row space-x-6 items-center group_4" bindtap="toggleLike">
+          <image class="shrink-0 image_8" src="{{detail.zaned?'../../assets/zaned.png':'../../assets/890ebd1a8446221f8a655e1d6a0decf1.png'}}" />
+          <text class="font_2 text_4">{{detail.likeCount}}</text>
+        </view>
+      </view>
+      <text class="self-start font_3">创作id：{{detail.id}}</text>
+      <view class="group_5" bindtap="copyKeywords">
+        <text class="font_3 text_5">咒语：{{detail.args.prompt}}</text>
+        <text class="font_3 text_6">（点击可复制咒语）</text>
+      </view>
+    </view>
+    <view class="flex-row space-x-18 justify-center group_6">
+      <button wx:if="{{detail.published}}" open-type="share" class="flex-col text-wrapper justify-start items-center"><text class="font_4">分享</text></button>
+      <button wx:if="{{!detail.published&&detail.user.id===userId}}" class="flex-col text-wrapper justify-start items-center" bindtap="publishIt"><text class="font_4">发布到画廊</text></button>
+      <view class="flex-col text-wrapper_2 justify-start items-center" bindtap="saveImage"><text class="font_4">保存相册</text></view>
+    </view>
+  </view>
+</view>

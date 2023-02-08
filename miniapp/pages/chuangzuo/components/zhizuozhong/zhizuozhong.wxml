@@ -1,0 +1,16 @@
+<view class="flex-col page page_1">
+  <view class="flex-col flex-auto group_2">
+    <view class="flex-row justify-center items-center section_1">
+      <Star />
+      <text class="text_3">施/法/中</text>
+      <Star class="image_1" />
+    </view>
+    <view class="bar"></view>
+    <view class="flex-col section_2">
+      <view class="flex-col items-center">
+        <text class="font_2">提示：中途离开页面不会影响创作</text>
+        <text class="mt-4 font_2">可关闭小程序，绘图成功后将会在草稿中</text>
+      </view>
+    </view>
+  </view>
+</view>

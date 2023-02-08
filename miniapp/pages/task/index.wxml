@@ -1,0 +1,24 @@
+<view class="page flex-col items-center">
+  <view class="item">
+    <view class="flex-row justify-between items-center">
+      <view class="title">分享给好友 +2</view>
+      <button class="btn" open-type="share">现在邀请</button>
+    </view>
+    <view class="detail" wx:if="{{countMap}}">已完成 ({{countMap.ShareToFriend}}/2)</view>
+    <view class="detail" wx:else></view>
+  </view>
+<!--  <view class="item">-->
+<!--    <view class="flex-row justify-between items-center">-->
+<!--      <view class="title">观看广告 +4</view>-->
+<!--      <view class="btn">现在观看</view>-->
+<!--    </view>-->
+<!--    <view class="detail" bind:tap="watchAd">已完成 (0/10)</view>-->
+<!--  </view>-->
+  <view class="item">
+    <view class="flex-row justify-between items-center">
+      <view class="title">邀请好友加入 +10</view>
+      <button class="btn" open-type="share">现在邀请</button>
+    </view>
+    <view class="detail">邀请成功 (通过你分享的卡片注册登录) 后，邀请人获得10魔法值，被邀请人同步获得10魔法值</view>
+  </view>
+</view>

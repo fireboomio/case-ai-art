@@ -1,0 +1,133 @@
+.page {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.section {
+  padding: 106rpx 28rpx 186rpx;
+  background-image: linear-gradient(180deg, #0d0a73 0%, #3d72d2 100%);
+}
+.space-x-15 > view:not(:first-child),
+.space-x-15 > text:not(:first-child),
+.space-x-15 > image:not(:first-child) {
+  margin-left: 30rpx;
+}
+.image-wrapper {
+  padding: 8rpx;
+  background-color: #dddddd;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.image_2 {
+  width: 124rpx;
+  height: 124rpx;
+  border-radius: 50%;
+}
+.group_2 {
+  margin-top: 24rpx;
+}
+.space-y-6 > view:not(:first-child),
+.space-y-6 > text:not(:first-child),
+.space-y-6 > image:not(:first-child) {
+  margin-top: 12rpx;
+}
+.text {
+  color: #ffffff;
+  font-size: 32rpx;
+  font-family: 'PingFang SC';
+  font-weight: 500;
+  line-height: 44rpx;
+}
+.font_1 {
+  font-size: 24rpx;
+  font-family: 'PingFang SC';
+  line-height: 34rpx;
+  color: #666666;
+}
+.text_2 {
+  color: #ffffff;
+  font-weight: 500;
+}
+.space-y-14 > view:not(:first-child),
+.space-y-14 > text:not(:first-child),
+.space-y-14 > image:not(:first-child) {
+  margin-top: 28rpx;
+}
+.image {
+  border-radius: 28rpx;
+  width: 152rpx;
+  height: 56rpx;
+}
+.image_3 {
+  margin-right: 14rpx;
+  width: 52rpx;
+  height: 50rpx;
+}
+.section_3 {
+  margin-top: -152rpx;
+  padding: 26rpx 28rpx 24rpx;
+  background-color: #ffffff;
+  border-radius: 58rpx 58rpx 0px 0px;
+}
+.group_3 {
+  position: relative;
+  margin: 0 38rpx;
+}
+.space-x-13 > view:not(:first-child),
+.space-x-13 > text:not(:first-child),
+.space-x-13 > image:not(:first-child) {
+  margin-left: 26rpx;
+}
+.space-y-8 > view:not(:first-child),
+.space-y-8 > text:not(:first-child),
+.space-y-8 > image:not(:first-child) {
+  margin-top: 16rpx;
+}
+.image_4 {
+  border-radius: 12rpx;
+  width: 306rpx;
+  height: 440rpx;
+}
+.scroll-view {
+  margin-top: 16rpx;
+  height: calc(100vh - 44px - 318rpx);
+}
+.grid {
+  position: relative;
+  column-count: 2;
+  column-gap: 20rpx;
+  padding-bottom: 20rpx;
+}
+.grid-item {
+  padding: 14rpx;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  break-inside: avoid;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  min-height: 240rpx;
+  box-shadow: 0px 2px 8px 0px #EBEFF5;
+}
+.tabs_aYnX85Ex scroll-view {
+  background-color: transparent !important;
+}
+
+.group_4 {
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.fenxiang_icon,
+.dianzan_icon {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 14rpx;
+}
+
+.dianzan_icon {
+  margin-left: auto;
+}

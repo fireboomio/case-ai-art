@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "unauthorized": "../../components/unauthorized/unauthorized",
+    "empty": "../../components/empty/empty"
+  },
+  "navigationStyle": "custom"
+}

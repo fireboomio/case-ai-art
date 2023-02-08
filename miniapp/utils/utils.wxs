@@ -1,0 +1,4 @@
+function includes(list, item) {
+  return list.indexOf(item) > -1
+}
+module.exports.includes = includes;

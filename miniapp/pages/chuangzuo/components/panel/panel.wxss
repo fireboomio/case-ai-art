@@ -1,0 +1,36 @@
+
+.group_6 {
+  border-bottom: solid 2rpx #dfdfdf;
+}
+.group_7 {
+  padding: 12rpx 32rpx 20rpx;
+  border-bottom: solid 2rpx #dfdfdf;
+}
+.image_8 {
+  width: 26rpx;
+  height: 16rpx;
+}
+.image_9 {
+  margin-top: 20rpx;
+}
+.group_1 {
+  padding: 24rpx 0 16rpx;
+}
+.font_4 {
+  font-size: 28rpx;
+  font-family: 'PingFang SC';
+  line-height: 40rpx;
+  color: #343434;
+}
+.font_5 {
+  font-size: 28rpx;
+  font-family: 'Apple Color Emoji';
+  line-height: 46rpx;
+  color: #e9b162;
+}
+.group_8 {
+  margin-left: 256rpx;
+}
+.collapse {
+  transform: rotateY(180deg);
+}

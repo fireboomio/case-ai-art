@@ -1,0 +1,6 @@
+@import '../../app.wxss';
+
+.image_6 {
+  width: 28rpx;
+  height: 28rpx;
+}

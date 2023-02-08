@@ -1,0 +1,4 @@
+<view class="page flex-col items-center justify-center">
+  <text>当前页面需要登录后查看</text>
+  <button class="btn" type="primary" bindtap="toLogin">前往登录</button>
+</view>

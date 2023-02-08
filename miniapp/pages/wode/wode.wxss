@@ -1,0 +1,99 @@
+.page {
+  background-color: #f0f0f0;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.font_2 {
+  font-size: 32rpx;
+  font-family: 'PingFang SC';
+  line-height: 44rpx;
+  font-weight: 500;
+}
+.group {
+  overflow-y: auto;
+}
+.section {
+  padding: 32rpx 26rpx 52rpx;
+  background-color: #e8c082;
+}
+.space-x-13 > view:not(:first-child),
+.space-x-13 > text:not(:first-child),
+.space-x-13 > image:not(:first-child) {
+  margin-left: 26rpx;
+}
+.image-wrapper {
+  background-color: #dddddd;
+  border-radius: 12rpx;
+  width: 140rpx;
+  height: 136rpx;
+  overflow: hidden;
+}
+.image_6 {
+  margin-top: 18rpx;
+  width: 92rpx;
+  height: 100rpx;
+}
+.image_avatar {
+  width: 140rpx;
+  height: 136rpx;
+}
+.space-y-3 > view:not(:first-child),
+.space-y-3 > text:not(:first-child),
+.space-y-3 > image:not(:first-child) {
+  margin-top: 6rpx;
+}
+.text_3 {
+  color: #ffffff;
+}
+.font_3 {
+  font-size: 24rpx;
+  font-family: 'PingFang SC';
+  line-height: 34rpx;
+  color: #ffffff;
+}
+.text-wrapper {
+  background-color: #cb9a5c;
+  border-radius: 19rpx;
+  width: 108rpx;
+  border: solid 2rpx #aa833e;
+}
+.text-wrapper_2 {
+  background-color: #cb9a5c;
+  border-radius: 19rpx;
+  width: 140rpx;
+  border: solid 2rpx #aa833e;
+}
+.list {
+  margin: 28rpx 32rpx 0;
+}
+.section_2 {
+  background-color: #ffffff;
+  border-radius: 12rpx;
+}
+.group_2 {
+  padding: 20rpx 28rpx;
+}
+.space-x-4 > view:not(:first-child),
+.space-x-4 > text:not(:first-child),
+.space-x-4 > image:not(:first-child) {
+  margin-left: 8rpx;
+}
+.font_4 {
+  font-size: 28rpx;
+  font-family: 'Apple Color Emoji';
+  line-height: 46rpx;
+  color: #303133;
+}
+.font_5 {
+  font-size: 28rpx;
+  font-family: 'PingFang SC';
+  line-height: 40rpx;
+  color: #303133;
+}
+.image_7 {
+  margin-right: 8rpx;
+  width: 14rpx;
+  height: 26rpx;
+}

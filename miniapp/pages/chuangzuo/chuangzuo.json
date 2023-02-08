@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "AI魔法师",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "panel": "./components/panel/panel",
+    "zhizuozhong": "./components/zhizuozhong/zhizuozhong",
+    "wancheng": "./components/wancheng/wancheng"
+  }
+}

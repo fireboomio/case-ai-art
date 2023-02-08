@@ -1,0 +1,79 @@
+.page {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.group_2 {
+  padding: 30rpx 0 404rpx;
+  overflow-y: auto;
+}
+.text_3 {
+  margin-left: 12rpx;
+  color: transparent;
+  font-size: 42rpx;
+  font-family: 'PingFang SC';
+  font-weight: 500;
+  line-height: 58rpx;
+  letter-spacing: 7.3rpx;
+  background-image: linear-gradient(88.8deg, #ee5663 0%, #ee5663 -0.34%, #e57848 92.25%, #e57848 100%);
+  -webkit-background-clip: text;
+}
+.image_1 {
+  margin-left: 18rpx;
+}
+.group_3 {
+  margin-top: 52rpx;
+}
+.group_4 {
+  padding: 0 28rpx 36rpx;
+}
+.font_2 {
+  font-size: 28rpx;
+  font-family: 'PingFang SC';
+  line-height: 40rpx;
+}
+.text_4 {
+  color: #6c6c6c;
+}
+.text_5 {
+  color: #909399;
+}
+.space-x-12 > view:not(:first-child),
+.space-x-12 > text:not(:first-child),
+.space-x-12 > image:not(:first-child) {
+  margin-left: 24rpx;
+}
+.section {
+  background-color: #d8d8d8;
+  width: 346rpx;
+  height: 2rpx;
+}
+.image_7 {
+  border-radius: 50%;
+  width: 10rpx;
+  height: 10rpx;
+}
+.section_2 {
+  background-color: #d8d8d8;
+  width: 345rpx;
+  height: 2rpx;
+}
+.list {
+  position: relative;
+  margin: 62rpx 40rpx 0;
+}
+.grid {
+  height: 754rpx;
+}
+.pos_10 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.image_8 {
+  border-radius: 12rpx;
+  width: 320rpx;
+  height: 362rpx;
+}

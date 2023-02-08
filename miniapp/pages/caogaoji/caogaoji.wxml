@@ -1,0 +1,30 @@
+<view class="flex-col page">
+  <view class="flex-col flex-auto group_2">
+    <view class="flex-row justify-center items-center">
+      <Star />
+      <text class="text_3">草/稿/集</text>
+      <Star class="image_1" />
+    </view>
+    <view class="flex-col group_3">
+      <view class="flex-row items-center group_4">
+        <text class="font_2 text_4">咒语：小狗</text>
+        <text class="font_2 text_5">（点击可复制咒语）</text>
+      </view>
+      <view class="flex-row justify-center items-center space-x-12">
+        <view class="section"></view>
+        <image class="image_7" src="../../assets/b0717f97a3f9ee004029194155d52960.png" />
+        <view class="section_2"></view>
+      </view>
+    </view>
+    <view class="flex-row list grid">
+      <image
+        class="pos_10 image_8"
+        src="../../assets/aeb2b7dd840660833e79a0c5d180c6bc.png"
+        wx:key="*this"
+        wx:for-item="item"
+        wx:for-index="i"
+        wx:for="{{list_2NZoalqQ}}"
+      />
+    </view>
+  </view>
+</view>

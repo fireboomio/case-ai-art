@@ -1,0 +1,3 @@
+// components/loading.ts
+Component({
+})

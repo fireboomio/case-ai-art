@@ -1,0 +1,47 @@
+<!-- <wxs src="../../utils/utils.wxs" module="utils"/>  -->
+<block>
+  <zhizuozhong wx:if="{{loading}}" />
+  <wancheng wx:elif="{{generatedUrl}}" artId="{{generatedId}}" url="{{generatedUrl}}" bindfinish="resetState" />
+  <view wx:else class="flex-col page">
+    <view class="flex-col flex-auto justify-start group_2">
+        <view class="flex-col group_3">
+        <view class="flex-row justify-between items-center group_4" bindtap="generateRandomPrompt">
+            <view class="flex-row space-x-8">
+            <image class="shrink-0 image_6" src="../../assets/0d1a0d8d666fbb2632ba901812604ce8.png" />
+            <text class="font_2 text_3">输入咒语</text>
+            </view>
+            <view class="flex-row space-x-7 items-center section">
+            <image class="shrink-0 image_7" src="../../assets/f741ea46f9e05799b3500a011c1defcc.png" />
+            <text class="font_3 text_4">推荐</text>
+            </view>
+        </view>
+        <text class="self-start font_3 text_5">建议输入英文，中文会自动翻译成英文，使用英文逗号分隔</text>
+        <textarea class="text-wrapper view_1 input-T6r0g9KY" placeholder="伟大的魔法师，请输入您的咒语吧" maxlength="200" value="{{prompt}}" bindinput="onInput" />
+        <view class="flex-row space-x-7 justify-center items-center self-end view_5" bindtap="clearInput">
+            <text class="font_5">🗑️</text>
+            <text class="font_3 text_7">清空</text>
+        </view>
+        <view class="flex-col group_5">
+            <panel icon="💫" title="咒语类型">
+            <block wx:for="{{algorithmArr}}" wx:key="*this">
+                <view class="flex-col text-wrapper_1 justify-start items-center {{selectedAlgorithm === item? 'selected' : ''}}" data-item="{{item}}" data-selected="selectedAlgorithm" bindtap="onSelect">{{item}}</view>
+            </block>
+            </panel>
+            <panel icon="📏" title="咒语尺寸">
+            <view wx:for="{{ratioArr}}" wx:key="*this" data-item="{{item}}" data-selected="selectedRatio" bindtap="onSelect" class="flex-col text-wrapper_2 justify-start items-center {{selectedRatio === item? 'selected' : ''}}">{{item}}</view>
+            </panel>
+            <panel icon="🙏" title="历史上伟大的魔法师">
+            <view wx:for="{{artistArr}}" wx:key="*this" data-item="{{item}}" data-selected="selectedArtist" bindtap="onSelect" class="flex-col text-wrapper_1 justify-start items-center {{selectedArtist === item? 'selected' : ''}}">{{item}}</view>
+            </panel>
+            <panel icon="🏷️" title="咒语风格">
+            <view wx:for="{{styleArr}}" wx:key="*this" data-item="{{item}}" data-selected="selectedStyle" bindtap="onSelect" class="flex-col text-wrapper_2 justify-start items-center {{selectedStyle === item? 'selected' : ''}}">{{item}}</view>
+            </panel>
+            <view class="flex-row justify-evenly items-center self-center section_4" bindtap="submit">
+            <text class="font_5 text_9">🎨</text>
+            <text class="font_4 text_10">施法</text>
+            </view>
+        </view>
+        </view>
+    </view>
+  </view>
+</block>

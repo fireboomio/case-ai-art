@@ -1,0 +1,27 @@
+.container{
+    padding: 0 20rpx;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 44rpx);
+    box-sizing: border-box;
+}
+.column{
+    padding: 20rpx 0;
+    width: 345rpx;
+    height: fit-content;
+}
+
+.item{
+    width: 345rpx;
+    background: white;
+    margin-bottom: 20rpx;
+    padding: 14rpx;
+    font-size: 0;
+    border-radius: 12rpx;
+}
+.image {
+    border-radius: 12rpx;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,140 @@
+.page {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.font_2 {
+  font-size: 32rpx;
+  font-family: 'PingFang SC';
+  line-height: 46rpx;
+  font-weight: 500;
+  color: #000000;
+}
+.group_2 {
+  overflow-y: auto;
+}
+.group_3 {
+  padding: 24rpx 20rpx 0;
+}
+.group_4 {
+  padding: 0 20rpx;
+}
+.space-x-8 > view:not(:first-child),
+.space-x-8 > text:not(:first-child),
+.space-x-8 > image:not(:first-child) {
+  margin-left: 16rpx;
+}
+.image_6 {
+  width: 38rpx;
+  height: 42rpx;
+}
+.text_3 {
+  line-height: 44rpx;
+}
+.section {
+  padding: 12rpx 22rpx;
+  border-radius: 30rpx;
+  height: 60rpx;
+  border: solid 2rpx #579bf3;
+}
+.image_7 {
+  width: 28rpx;
+  height: 28rpx;
+}
+.font_3 {
+  font-size: 24rpx;
+  font-family: 'PingFang SC';
+  line-height: 34rpx;
+  color: #e9b162;
+}
+.text_4 {
+  color: #5b95f1;
+}
+.text_5 {
+  margin-left: 10rpx;
+  margin-top: 28rpx;
+  color: #848484;
+  letter-spacing: -1.6rpx;
+}
+.text-wrapper {
+  margin: 60rpx 18rpx 0 8rpx;
+}
+.view_1 {
+  background-color: #f8f8f8;
+  height: 200rpx;
+}
+.view_5 {
+  margin-top: 42rpx;
+  padding: 4rpx 0;
+  border-radius: 8rpx;
+  width: 158rpx;
+  border: solid 2rpx #3a3a3a;
+}
+.space-x-7 > view:not(:first-child),
+.space-x-7 > text:not(:first-child),
+.space-x-7 > image:not(:first-child) {
+  margin-left: 14rpx;
+}
+.text_7 {
+  margin-right: 8rpx;
+  color: #343434;
+}
+.group_5 {
+  margin-top: 44rpx;
+  border-top: solid 2rpx #dfdfdf;
+}
+.text-wrapper_1 {
+  border: solid 2rpx #579bf3;
+  color: #579bf3;
+}
+.text-wrapper_1.selected {
+  background: #579bf3;
+  color: white;
+}
+.text-wrapper_2 {
+  border: solid 2rpx #6cca42;
+  color: #6ecc44;
+}
+.text-wrapper_2.selected {
+  background: #6ecc44;
+  color: white;
+}
+.text-wrapper_1,
+.text-wrapper_2 {
+  padding: 8rpx;
+  border-radius: 6rpx;
+  height: 52rpx;
+  min-width: 80rpx;
+  margin: 0 16rpx 16rpx 0;
+  font-size: 24rpx;
+  font-family: 'PingFang SC';
+  line-height: 34rpx;
+}
+.space-x-4 > view:not(:first-child),
+.space-x-4 > text:not(:first-child),
+.space-x-4 > image:not(:first-child) {
+  margin-left: 8rpx;
+}
+.section_4 {
+  margin-top: 48rpx;
+  margin-bottom: 48rpx;
+  padding: 8rpx 56rpx 16rpx;
+  background-color: #75fbc9;
+  box-shadow: 0px 4rpx 28rpx 0px #75fbc98a;
+  border-radius: 8rpx;
+  width: 284rpx;
+}
+.text_9 {
+  color: #343434;
+}
+.text_10 {
+  color: #070000;
+  font-weight: 500;
+  letter-spacing: 6rpx;
+}
+.input-T6r0g9KY {
+  width: calc(100% - 16rpx);
+  padding: 20rpx 20rpx 20rpx 20rpx;
+}

@@ -1,0 +1,27 @@
+.page {
+  height: 100%;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  margin-top: 20vh;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.btn-login{
+  width: 480rpx;
+  line-height: 80rpx;
+  border-radius: 4px;
+  text-align: center;
+  margin: auto 0 100rpx;
+  background-color: #eee;
+}
