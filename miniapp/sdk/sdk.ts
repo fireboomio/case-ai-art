@@ -1,5 +1,5 @@
 import { buildQuery, buildMutation, uploadFile, setAuthHeader, setBaseUrl, getBaseUrl } from './request'
-import type { FindOneAppUserResponse,FindOneAppUserInput,GetUserinfoResponse } from "./models";
+import type { CreateOnePointRecordResponse,CreateOnePointRecordInput,FindOneAppUserResponse,FindOneAppUserInput,GeneratePictureWithAIResponse,GeneratePictureWithAIInput,GetArtWorkDetailResponse,GetArtWorkDetailInput,GetMyAlbumResponse,GetMyAlbumInput,GetMyDraftsResponse,GetMyDraftsInput,GetMyLikedResponse,GetMyLikedInput,GetMyPointRecordsResponse,GetMyPointRecordsInput,GetMyPublicAlbumResponse,GetMyPublicAlbumInput,GetUserinfoResponse,GetWorksByHotResponse,GetWorksByHotInput,GetWorksByNewestResponse,GetWorksByNewestInput,GetWorksByRecommendResponse,GetWorksByRecommendInput,LikeOneArtWorkResponse,LikeOneArtWorkInput,MoveDraftToAlbumResponse,MoveDraftToAlbumInput,PublishMyArtWorkResponse,PublishMyArtWorkInput,RecordMyInviterResponse,RecordMyInviterInput,UnlikeOneArtWorkResponse,UnlikeOneArtWorkInput,UsePointsResponse } from "./models";
 
 setBaseUrl('http://127.0.0.1:9991')
 
@@ -26,10 +26,27 @@ function upload(serverName, filePath, fileName) {
 export default {
   query: {
     FindOneAppUser: buildQuery<FindOneAppUserResponse ,FindOneAppUserInput>('/operations/FindOneAppUser'),
+    GetArtWorkDetail: buildQuery<GetArtWorkDetailResponse ,GetArtWorkDetailInput>('/operations/GetArtWorkDetail'),
+    GetMyAlbum: buildQuery<GetMyAlbumResponse ,GetMyAlbumInput>('/operations/GetMyAlbum'),
+    GetMyDrafts: buildQuery<GetMyDraftsResponse ,GetMyDraftsInput>('/operations/GetMyDrafts'),
+    GetMyLiked: buildQuery<GetMyLikedResponse ,GetMyLikedInput>('/operations/GetMyLiked'),
+    GetMyPointRecords: buildQuery<GetMyPointRecordsResponse ,GetMyPointRecordsInput>('/operations/GetMyPointRecords'),
+    GetMyPublicAlbum: buildQuery<GetMyPublicAlbumResponse ,GetMyPublicAlbumInput>('/operations/GetMyPublicAlbum'),
     GetUserinfo: buildQuery<GetUserinfoResponse>('/operations/GetUserinfo'),
+    GetWorksByHot: buildQuery<GetWorksByHotResponse ,GetWorksByHotInput>('/operations/GetWorksByHot'),
+    GetWorksByNewest: buildQuery<GetWorksByNewestResponse ,GetWorksByNewestInput>('/operations/GetWorksByNewest'),
+    GetWorksByRecommend: buildQuery<GetWorksByRecommendResponse ,GetWorksByRecommendInput>('/operations/GetWorksByRecommend'),
   },
 
   mutation: {
+    CreateOnePointRecord: buildMutation<CreateOnePointRecordResponse ,CreateOnePointRecordInput>('/operations/CreateOnePointRecord'),
+    GeneratePictureWithAI: buildMutation<GeneratePictureWithAIResponse ,GeneratePictureWithAIInput>('/operations/GeneratePictureWithAI'),
+    LikeOneArtWork: buildMutation<LikeOneArtWorkResponse ,LikeOneArtWorkInput>('/operations/LikeOneArtWork'),
+    MoveDraftToAlbum: buildMutation<MoveDraftToAlbumResponse ,MoveDraftToAlbumInput>('/operations/MoveDraftToAlbum'),
+    PublishMyArtWork: buildMutation<PublishMyArtWorkResponse ,PublishMyArtWorkInput>('/operations/PublishMyArtWork'),
+    RecordMyInviter: buildMutation<RecordMyInviterResponse ,RecordMyInviterInput>('/operations/RecordMyInviter'),
+    UnlikeOneArtWork: buildMutation<UnlikeOneArtWorkResponse ,UnlikeOneArtWorkInput>('/operations/UnlikeOneArtWork'),
+    UsePoints: buildMutation<UsePointsResponse>('/operations/UsePoints'),
   },
   upload,
   setBaseUrl

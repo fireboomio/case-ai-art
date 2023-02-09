@@ -15,7 +15,7 @@ export function recordInviter(options) {
  * @returns {Promise<void>}
  */
 export async function reportShare(way) {
-  void sdk.mutation.CreateOneShare({
+  void sdk.mutation.CreateOnePointRecord({
     way,
     point: 0,
     userId: getApp().globalData.userInfo?.id
