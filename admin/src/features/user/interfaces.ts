@@ -10,10 +10,10 @@
 
 export type IAppUser = {
   id:          number
-  name:        string
-  age:         number
+  nickname:        string
+  points:         number
   // sex:         ESex
-  sex: number
+  avatar: string
   // category: {
   //   id: number
   //   name: string

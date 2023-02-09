@@ -54,6 +54,7 @@ export function AuthenticationProvider({ children }: { children?: ReactNode }) {
   }, [])
 
   const fetchUserPermissions = useCallback(async (user?: UserInfo) => {
+    return
     if (user) {
       console.log(user)
       console.log('====','/operations/GetUserRoleMenu', {

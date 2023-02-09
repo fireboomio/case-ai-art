@@ -48,7 +48,7 @@ export const AppUserList = () => {
               return (
                 <Space>
                   <ShowButton size="small" recordItemId={record.id} hideText/>
-                  <EditButton size="small" recordItemId={record.id} hideText/>
+                  {/*<EditButton size="small" recordItemId={record.id} hideText/>*/}
                   {/*<DeleteButton size="small" recordItemId={record.id} hideText/>*/}
                 </Space>
               )
