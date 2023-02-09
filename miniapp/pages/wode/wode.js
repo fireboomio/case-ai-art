@@ -43,10 +43,10 @@ Page({
       userInfo: getApp().globalData.userInfo,
       userId: (userId ?? "").slice(0, 10),
     })
-    const appUser = getApp().globalData.appUser
-    this.localUserId = appUser?.id
+    const userInfo = getApp().globalData.userInfo
+    this.localUserId = userInfo?.id
     this.setData({
-      points: appUser?.points ?? 0
+      points: userInfo?.points ?? 0
     })
   },
 

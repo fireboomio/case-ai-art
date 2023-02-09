@@ -22,7 +22,7 @@ Page({
   },
   toDetail(e) {
     console.log(e,'======')
-    if (!getApp().globalData.appUser) {
+    if (!getApp().globalData.userInfo) {
       wx.navigateTo({
         url: '/pages/login/index',
       })

@@ -18,14 +18,13 @@ export async function reportShare(way) {
   void sdk.mutation.CreateOneShare({
     way,
     point: 0,
-    userId: getApp().globalData.appUser?.id
+    userId: getApp().globalData.userInfo?.id
   })
 }
 export async  function queryUserInfo() {
   const result = await sdk.query.GetUserinfo()
   if (!result.errors) {
-    getApp().globalData.userInfo = result?.oidcUser?.accessToken
-    getApp().globalData.appUser = result?.appUser
+    getApp().globalData.userInfo = result
   
     const pages = getCurrentPages()
     pages.forEach(page => {
@@ -83,7 +82,7 @@ export function saveImage(url) {
 }
 
 export function requireAuth() {
-  const user = getApp().globalData.appUser
+  const user = getApp().globalData.userInfo
   if (!user) {
     wx.navigateTo({
       url: '/pages/login/index',

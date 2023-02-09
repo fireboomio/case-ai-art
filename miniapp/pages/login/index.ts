@@ -9,11 +9,12 @@ Page({
     const inviterId = wx.getStorageSync('inviterId')
     if (success) {
       if (await queryUserInfo()) {
-        if (inviterId && getApp().globalData.appUser?.id) {
+        const userId = getApp().globalData.userInfo?.id
+        if (inviterId && userId) {
           sdk.mutation.RecordMyInviter(
             {
               inviterId: Number(inviterId),
-              userId: getApp().globalData.appUser?.id
+              userId
             }
           )
         }

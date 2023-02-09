@@ -13,7 +13,7 @@ Page({
     const resp = await sdk.query.GetMyPointRecords({
       way: ['WatchAD', 'ShareToFriend'],
       timeStart: now.toISOString(),
-      userId: (getApp().globalData.appUser?.id) as number
+      userId: (getApp().globalData.userInfo?.id) as string
     })
     console.log(resp,'====')
     const records = resp.data.data || []

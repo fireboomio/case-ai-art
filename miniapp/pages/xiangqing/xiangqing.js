@@ -29,7 +29,7 @@ Page({
     saveImage(this.data.detail.url)
   },
   async toggleLike() {
-    const user = getApp().globalData.appUser
+    const user = getApp().globalData.userInfo
     const {
       id,
       zaned,
@@ -83,7 +83,7 @@ Page({
     }
   },
   async fetchData(id) {
-    const user = getApp().globalData.appUser
+    const user = getApp().globalData.userInfo
     const ret = await sdk.query.GetArtWorkDetail({
       id,
       userId: user.id
@@ -100,7 +100,7 @@ Page({
     }
   },
   async onLoad(query) {
-    const user = getApp().globalData.appUser
+    const user = getApp().globalData.userInfo
     if (user) {
       this.setData({ userId: user.id })
     }
