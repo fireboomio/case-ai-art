@@ -37,7 +37,6 @@ Page({
     } = this.data.detail
     if (zaned) {
       const ret = await sdk.mutation.UnlikeOneArtWork({
-        userId: user.id,
         artWorkId: id
       })
       if (!ret.errors) {
@@ -51,8 +50,7 @@ Page({
       }
     } else {
       const ret = await sdk.mutation.LikeOneArtWork({
-        artWorkId: id,
-        userId: user.id
+        artWorkId: id
       })
       if (!ret.errors) {
         this.setData({
@@ -85,8 +83,7 @@ Page({
   async fetchData(id) {
     const user = getApp().globalData.userInfo
     const ret = await sdk.query.GetArtWorkDetail({
-      id,
-      userId: user.id
+      id
     })
     if (ret.data) {
       this.setData({

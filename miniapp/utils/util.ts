@@ -17,8 +17,7 @@ export function recordInviter(options) {
 export async function reportShare(way) {
   void sdk.mutation.CreateOnePointRecord({
     way,
-    point: 0,
-    userId: getApp().globalData.userInfo?.id
+    point: 0
   })
 }
 export async  function queryUserInfo() {

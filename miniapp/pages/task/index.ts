@@ -12,8 +12,7 @@ Page({
     const now = new Date(Math.floor(Date.now() / 86400000) * 86400000)
     const resp = await sdk.query.GetMyPointRecords({
       way: ['WatchAD', 'ShareToFriend'],
-      timeStart: now.toISOString(),
-      userId: (getApp().globalData.userInfo?.id) as string
+      timeStart: now.toISOString()
     })
     console.log(resp,'====')
     const records = resp.data.data || []
@@ -28,9 +27,10 @@ Page({
   },
   watchAd() {
     console.log('watchAd')
-  }, onShareAppMessage(e) {
+  },
+  onShareAppMessage(e) {
     reportShare('ShareToFriend')
-    const path = "/pages/chuangzuo/chuangzuo?inviterId=" + this.localUserId
+    const path = "/pages/chuangzuo/chuangzuo?inviterId=" + getApp().globalData.userInfo.id;
     return {
       title: "我在这里发现了一个好玩的小程序，快来看看吧",
       path

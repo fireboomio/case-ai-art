@@ -99,8 +99,7 @@ Page({
         loading: true
       })
       const ret = await sdk.mutation.GeneratePictureWithAI({
-        args: JSON.stringify(args),
-        userId: getApp().globalData.userInfo?.id
+        args: JSON.stringify(args)
       })
       if (!ret.errors && ret.data) {
         this.setData({

@@ -35,7 +35,7 @@ Page({
     })
   },
   async loadUser() {
-    const userId = getApp().globalData.userInfo?.sub
+    const userId = getApp().globalData.userInfo?.id
     if (!userId) {
       return
     }

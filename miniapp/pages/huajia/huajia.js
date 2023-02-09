@@ -41,8 +41,7 @@ Page({
     const user = this.data.user
     const ret = await sdk.query[this.data.tabs[this.data.activeTab].operation]({
       skip: (this.data.page - 1) * this.data.pageSize,
-      take: this.data.pageSize,
-      userId: user.id
+      take: this.data.pageSize
     })
     if (ret.data?.data?.length) {
       const list = this.data.activeTab === 3 ? ret.data.data.map(item => item.artWork) : ret.data.data

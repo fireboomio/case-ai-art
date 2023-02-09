@@ -3,7 +3,7 @@
     <view class="flex-col">
       <view class="flex-row items-center section space-x-13">
         <view class="flex-col justify-start items-center image-wrapper">
-          <image class="image_avatar" src="{{userInfo.picture}}" wx:if="{{userId}}"></image>
+          <image class="image_avatar" src="{{userInfo.avatar}}" wx:if="{{userId}}"></image>
           <image bind:tap="goLogin" class="image_6" src="../../assets/fc1525594a4625d0e4a65d0a7be40889.png" wx:else/>
         </view>
         <view class="flex-col items-start flex-auto space-y-3">
