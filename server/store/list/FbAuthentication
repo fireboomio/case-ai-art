@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1249675034624000,
+		"point": "http://localhost:9991/auth/cookie/authorize/authing?redirect_uri=",
+		"name": "authing",
+		"authSupplier": "openid",
+		"switchState": [
+			"cookieBased",
+			"tokenBased"
+		],
+		"config": {
+			"id": "authing",
+			"clientId": {
+				"key": "",
+				"kind": "0",
+				"val": "63ae88490f3dff9d1a651cea"
+			},
+			"clientSecret": {
+				"key": "",
+				"kind": "0",
+				"val": "e8094233545dec4b3b7fc848eb04e306"
+			},
+			"issuer": "https://sail.authing.cn/oidc",
+			"discoveryURL": "",
+			"jwks": 0,
+			"jwksJSON": "",
+			"jwksURL": "https://sail.authing.cn/oidc/.well-known/jwks.json",
+			"userInfoEndpoint": "https://sail.authing.cn/oidc/me",
+			"userInfoCacheTtlSeconds": 0,
+			"AuthorizationEndpoint": "https://sail.authing.cn/oidc/auth",
+			"tokenEndpoint": "https://sail.authing.cn/oidc/token"
+		},
+		"createTime": "2023-02-09 14:37:52",
+		"updateTime": "2023-02-09 14:44:04",
+		"isDel": 0
+	}
+]
