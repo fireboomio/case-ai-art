@@ -1,7 +1,7 @@
 import { AuthenticationHookRequest } from 'fireboom-wundersdk/server'
 
 export default async function postAuthentication(hook: AuthenticationHookRequest) : Promise<void>{
-  if (hook.user?.userId) {
+  if (hook.user?.userId && hook.user.providerId === 'wx') {
     const { provider, providerId, userId } = hook.user
     const { nickname, picture } = hook.user.idToken!
     const resp = await hook.internalClient.queries.FindOneAppUser({

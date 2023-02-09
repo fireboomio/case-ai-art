@@ -1,0 +1,39 @@
+model User {
+  id        Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  providerUserId   String
+  name String
+  avatarUrl String?
+  provider String
+  providerId String
+  Role Role[]
+}
+
+model Role {
+  id        Int @id @default(autoincrement())
+  code String
+  desc String?
+  User User[]
+  Menu Menu[]
+}
+
+model Menu {
+  id Int @id @default(autoincrement())
+  parentId Int?
+  label String
+  name String
+  icon String?
+  sort Int @default(0)
+  level Int @default(1)
+  Menu            Menu?  @relation("MenuToMenu_parentId", fields: [parentId], references: [id])
+  other_Menu          Menu[] @relation("MenuToMenu_parentId")
+  Role Role[]
+}
+
+model Pet {
+  id        Int      @id @default(autoincrement())
+  name      String
+  age       Int
+  sex       Int
+  createdAt DateTime @default(now())
+}

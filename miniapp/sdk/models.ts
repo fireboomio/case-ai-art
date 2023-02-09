@@ -719,11 +719,7 @@ export interface InternalFindOneAppUserInput {
 id: string
 }
 
-export interface InternalGeneratePictureWithAIInput {
-args: string
-}
-
-export interface InternalGetArtWorkDetailInput {
+export interface DeleteOneArtWorkInput {
 id: number
 }
 
@@ -853,7 +849,8 @@ take?: number
 userId: string
 }
 
-export interface InjectedGetMyDraftsInput {
+export interface InjectedGetArtWorkListInput {
+query?: art_ArtWorkWhereInput
 skip?: number
 take?: number
 userId: string
@@ -938,8 +935,8 @@ id: string
 
 
 
-export interface CreateOneAppUserResponse {
-data?: CreateOneAppUserResponseData
+export interface CreateOneAdminUserResponse {
+data?: CreateOneAdminUserResponseData
 errors?: ReadonlyArray<GraphQLError>;
 }
 
@@ -948,8 +945,8 @@ data?: CreateOneCreationResponseData
 errors?: ReadonlyArray<GraphQLError>;
 }
 
-export interface CreateOneDraftResponse {
-data?: CreateOneDraftResponseData
+export interface GetArtWorkListResponse {
+data?: GetArtWorkListResponseData
 errors?: ReadonlyArray<GraphQLError>;
 }
 
