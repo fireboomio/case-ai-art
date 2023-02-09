@@ -1,15 +1,49 @@
 [
 	{
-		"id": 1249675034624000,
-		"point": "http://localhost:9991/auth/cookie/authorize/authing?redirect_uri=",
-		"name": "authing",
 		"authSupplier": "openid",
+		"config": {
+			"AuthorizationEndpoint": "https://sail.authing.cn/oidc/auth",
+			"clientId": {
+				"key": "",
+				"kind": "0",
+				"val": "63ae88490f3dff9d1a651cea"
+			},
+			"clientSecret": {
+				"key": "",
+				"kind": "0",
+				"val": "e8094233545dec4b3b7fc848eb04e306"
+			},
+			"discoveryURL": "",
+			"id": "authing",
+			"issuer": "https://sail.authing.cn/oidc",
+			"jwks": 0,
+			"jwksJSON": "",
+			"jwksURL": "https://sail.authing.cn/oidc/.well-known/jwks.json",
+			"tokenEndpoint": "https://sail.authing.cn/oidc/token",
+			"userInfoCacheTtlSeconds": 0,
+			"userInfoEndpoint": "https://sail.authing.cn/oidc/me"
+		},
+		"createTime": "2023-02-09 14:37:52",
+		"id": 1249675034624000,
+		"isDel": 0,
+		"name": "authing",
+		"point": "http://localhost:9991/auth/cookie/authorize/authing?redirect_uri=",
 		"switchState": [
 			"cookieBased",
 			"tokenBased"
 		],
+		"updateTime": "2023-02-09 14:44:04"
+	},
+	{
+		"id": 1251475403571200,
+		"point": "http://localhost:9991/auth/cookie/authorize/wx?redirect_uri=",
+		"name": "wx",
+		"authSupplier": "openid",
+		"switchState": [
+			"cookieBased"
+		],
 		"config": {
-			"id": "authing",
+			"id": "wx",
 			"clientId": {
 				"key": "",
 				"kind": "0",
@@ -30,8 +64,8 @@
 			"AuthorizationEndpoint": "https://sail.authing.cn/oidc/auth",
 			"tokenEndpoint": "https://sail.authing.cn/oidc/token"
 		},
-		"createTime": "2023-02-09 14:37:52",
-		"updateTime": "2023-02-09 14:44:04",
+		"createTime": "2023-02-09 22:15:43",
+		"updateTime": "",
 		"isDel": 0
 	}
 ]

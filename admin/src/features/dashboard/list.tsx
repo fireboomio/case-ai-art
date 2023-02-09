@@ -29,7 +29,7 @@ export const DashboardList = () => {
       setUser(res?.data?.data?.user?._count?._all ?? '0')
     })
     axios.get('/operations/QueryStatistic').then((res) => {
-      const list = res?.data?.data?.statistics_DailyCreation ?? []
+      const list = res?.data?.data?.data ?? []
       setDaily(list)
     })
   }, []);

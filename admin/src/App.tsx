@@ -133,6 +133,13 @@ function App() {
         resources={[
           {
             options: {
+              label: '数据统计',
+            },
+            name: 'Dashboard',
+            list: DashboardList,
+          },
+          {
+            options: {
               label: '作品列表',
             },
             key: 'Role',
@@ -151,13 +158,6 @@ function App() {
             create: AppUserCreate,
             edit: AppUserEdit,
             show: AppUserShow,
-          },
-          {
-            options: {
-              label: '数据统计',
-            },
-            name: 'Dashboard',
-            list: DashboardList,
           }
         ]}
       />

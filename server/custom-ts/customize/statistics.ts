@@ -1,4 +1,4 @@
-import {GraphQLFloat, GraphQLInt, GraphQLObjectType, GraphQLSchema, GraphQLString, GraphQLList } from 'graphql';
+import {GraphQLFloat, GraphQLObjectType, GraphQLSchema, GraphQLString, GraphQLList } from 'graphql';
 import { prisma } from 'generated/prisma'
 
 export default new GraphQLSchema({
@@ -20,6 +20,7 @@ export default new GraphQLSchema({
             resolve() {
                 const t: any = prisma.art.queryRaw(`SELECT DATE_FORMAT(createdAt,'%Y-%m-%d') date, COUNT(1) total from Creation GROUP BY date`, {});
                 return t
+
             },
         },
     },

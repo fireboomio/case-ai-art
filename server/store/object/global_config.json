@@ -1,7 +1,8 @@
 {
   "authorizedRedirectUris": [
     "http://localhost:9123/#/workbench/userInfo",
-    "http://localhost:9123/#/workbench/rapi/loginBack"
+    "http://localhost:9123/#/workbench/rapi/loginBack",
+    "http://localhost:4321/oidc/callback"
   ],
   "hooksConfiguration": {
     "authentication": {
