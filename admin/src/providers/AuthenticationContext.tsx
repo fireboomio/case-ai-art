@@ -4,6 +4,7 @@ import { createContext, ReactNode, useCallback, useContext, useEffect, useState 
 import { IApi } from '../features/identity/permission/interfaces'
 import { IRole } from '../features/identity/role/interfaces'
 import { emtpyMenu } from '@/features/empty'
+import {useNavigation} from "@pankod/refine-core";
 
 export type UserInfo = {
   name?: string
@@ -80,6 +81,7 @@ export function AuthenticationProvider({ children }: { children?: ReactNode }) {
     }
   }, [])
 
+  const { replace } = useNavigation()
   const checkAuthentication = useCallback(() => {
     setIsLoading(true)
     return axios
@@ -88,6 +90,9 @@ export function AuthenticationProvider({ children }: { children?: ReactNode }) {
       })
       .then((data) => {
         if (data.status < 300 && data.status >= 200) {
+          if(!data.data.userId){
+            throw 1
+          }
           setUser(data.data as UserInfo)
           return data.data as UserInfo
         }

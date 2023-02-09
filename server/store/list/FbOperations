@@ -141,7 +141,7 @@
 		"roleType": "",
 		"roles": "",
 		"title": "/GetAppUserList",
-		"updateTime": "2023-02-09 17:20:03"
+		"updateTime": "2023-02-09 21:21:54"
 	},
 	{
 		"content": "query GetOneAppUser($id: Int!) {\n  data: art_findFirstAppUser(where: {id: {equals: $id}}) {\n    \n    id\n    nickname\n    avatar\n    phone\n    provider\n    providerId\n    providerUserId\n    points\n    createdAt\n    inviteById\n  }\n}",
@@ -162,7 +162,7 @@
 		"updateTime": "2023-02-09 17:51:38"
 	},
 	{
-		"content": "",
+		"content": "query GetCount {\n  user: art_aggregateAppUser {\n    _count {\n      _all\n    }\n  }\n  creation: art_aggregateCreation {\n    _count {\n      _all\n    }\n  }\n}",
 		"createTime": "2023-02-09 18:07:14",
 		"enable": 1,
 		"id": 1250498291892224,
@@ -177,7 +177,7 @@
 		"roleType": "",
 		"roles": "",
 		"title": "/GetCount",
-		"updateTime": "2023-02-09 18:23:46"
+		"updateTime": "2023-02-09 21:28:30"
 	},
 	{
 		"content": "",
@@ -198,7 +198,7 @@
 		"updateTime": "2023-02-09 18:40:30"
 	},
 	{
-		"content": "mutation CreateOneAdminUser($providerUserId: String!, $name: String!, $avatarUrl: String, $provider: String!, $providerId: String!) {\n  data: art_createOneAdminUser(data: {providerUserId: $providerUserId, name: $name, avatarUrl: $avatarUrl, provider: $provider, providerId: $providerId}) {\n    \n    id\n    createdAt\n    providerUserId\n    name\n    avatarUrl\n    provider\n    providerId\n  }\n}",
+		"content": "mutation CreateOneAdminUser($providerUserId: String!, $name: String!, $avatarUrl: String, $provider: String!, $providerId: String!) {\n  data: art_createOneAdminUser(data: {providerUserId: $providerUserId, name: $name, avatarUrl: $avatarUrl, provider: $provider, providerId: $providerId}) {\n    id\n    createdAt\n    providerUserId\n    name\n    avatarUrl\n    provider\n    providerId\n  }\n}",
 		"createTime": "2023-02-09 19:41:48",
 		"enable": 1,
 		"id": 1250870165700608,
@@ -213,7 +213,7 @@
 		"roleType": "",
 		"roles": "",
 		"title": "/CreateOneAdminUser",
-		"updateTime": "2023-02-09 19:41:53"
+		"updateTime": "2023-02-09 21:21:29"
 	},
 	{
 		"content": "query GetManyAdminUser {\n  data: art_findManyAdminUser {\n    \n    id\n    createdAt\n    providerUserId\n    name\n    avatarUrl\n    provider\n    providerId\n  }\n}",
@@ -232,5 +232,23 @@
 		"roles": "",
 		"title": "/GetManyAdminUser",
 		"updateTime": "2023-02-09 19:41:56"
+	},
+	{
+		"id": 1251314716508160,
+		"method": "GET",
+		"restUrl": "",
+		"operationType": "queries",
+		"isPublic": 1,
+		"remark": "",
+		"legal": 1,
+		"liveQuery": 0,
+		"title": "/QueryStatistic",
+		"content": "query QueryStatistic {\n  statistics_DailyCreation {\n    date\n    total\n  }\n} ",
+		"enable": 1,
+		"createTime": "2023-02-09 21:34:51",
+		"updateTime": "2023-02-09 21:40:48",
+		"isDel": 0,
+		"roleType": "",
+		"roles": ""
 	}
 ]

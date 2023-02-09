@@ -1,5 +1,5 @@
 import { buildQuery, buildMutation, uploadFile, setAuthHeader, setBaseUrl, getBaseUrl } from './request'
-import type { CreateOneAdminUserResponse,CreateOneAdminUserInput,DeleteOneArtWorkResponse,DeleteOneArtWorkInput,GetAppUserListResponse,GetAppUserListInput,GetArtWorkListResponse,GetArtWorkListInput,GetCountResponse,GetManyAdminUserResponse,GetOneAppUserResponse,GetOneAppUserInput,GetTodayCountResponse,GetTodayCountInput,UpdateOneAppUserResponse,UpdateOneAppUserInput } from "./models";
+import type { CreateOneAdminUserResponse,CreateOneAdminUserInput,DeleteOneArtWorkResponse,DeleteOneArtWorkInput,GetAppUserListResponse,GetAppUserListInput,GetArtWorkListResponse,GetArtWorkListInput,GetCountResponse,GetManyAdminUserResponse,GetOneAppUserResponse,GetOneAppUserInput,GetTodayCountResponse,GetTodayCountInput,QueryStatisticResponse,UpdateOneAppUserResponse,UpdateOneAppUserInput } from "./models";
 
 setBaseUrl('http://127.0.0.1:9991')
 
@@ -31,6 +31,7 @@ export default {
     GetManyAdminUser: buildQuery<GetManyAdminUserResponse>('/operations/GetManyAdminUser'),
     GetOneAppUser: buildQuery<GetOneAppUserResponse ,GetOneAppUserInput>('/operations/GetOneAppUser'),
     GetTodayCount: buildQuery<GetTodayCountResponse ,GetTodayCountInput>('/operations/GetTodayCount'),
+    QueryStatistic: buildQuery<QueryStatisticResponse>('/operations/QueryStatistic'),
   },
 
   mutation: {

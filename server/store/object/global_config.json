@@ -1,7 +1,7 @@
 {
   "authorizedRedirectUris": [
     "http://localhost:9123/#/workbench/userInfo",
-    "http://127.0.0.1:4321/oidc/callback"
+    "http://localhost:4321/oidc/callback"
   ],
   "hooksConfiguration": {
     "authentication": {

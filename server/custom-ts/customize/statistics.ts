@@ -1,5 +1,5 @@
 import {GraphQLFloat, GraphQLInt, GraphQLObjectType, GraphQLSchema, GraphQLString, GraphQLList } from 'graphql';
-import { prisma } from '../generated/prisma'
+import { prisma } from 'generated/prisma'
 
 export default new GraphQLSchema({
   query: new GraphQLObjectType({
