@@ -1,0 +1,36 @@
+[
+	{
+		"id": 1250243398926336,
+		"point": "http://localhost:9991/auth/cookie/authorize/wx?redirect_uri=",
+		"name": "wx",
+		"authSupplier": "openid",
+		"switchState": [
+			"tokenBased"
+		],
+		"config": {
+			"id": "wx",
+			"clientId": {
+				"key": "",
+				"kind": "0",
+				"val": "63ae88490f3dff9d1a651cea"
+			},
+			"clientSecret": {
+				"key": "",
+				"kind": "0",
+				"val": "e8094233545dec4b3b7fc848eb04e306"
+			},
+			"issuer": "https://sail.authing.cn/oidc",
+			"discoveryURL": "",
+			"jwks": 0,
+			"jwksJSON": "",
+			"jwksURL": "https://sail.authing.cn/oidc/.well-known/jwks.json",
+			"userInfoEndpoint": "https://sail.authing.cn/oidc/me",
+			"userInfoCacheTtlSeconds": 0,
+			"AuthorizationEndpoint": "https://sail.authing.cn/oidc/auth",
+			"tokenEndpoint": "https://sail.authing.cn/oidc/token"
+		},
+		"createTime": "2023-02-09 17:02:24",
+		"updateTime": "",
+		"isDel": 0
+	}
+]

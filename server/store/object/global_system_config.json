@@ -1,0 +1,25 @@
+{
+  "system": {
+    "apiPort": "9991",
+    "apiHost": "http://localhost:9991",
+    "middlewarePort": "9992",
+    "hooksServerURL": "http://127.0.0.1:9992",
+    "hooksServerPath": "./custom-ts",
+    "logLevel": -1,
+    "devSwitch": true,
+    "forcedJumpSwitch": true,
+    "debugSwitch": true,
+    "listenHost": "127.0.0.1",
+    "listenPort": "9991"
+  },
+  "version": {
+    "versionNum": "0.0.0.1",
+    "prismaVersion": "",
+    "prismaEngineVersion": "",
+    "copyright": "fireboom"
+  },
+  "environment": {
+    "environmentList": [],
+    "systemVariable": ""
+  }
+}

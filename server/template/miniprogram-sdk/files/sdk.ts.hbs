@@ -1,9 +1,16 @@
 import { buildQuery, buildMutation, uploadFile, setAuthHeader, setBaseUrl, getBaseUrl } from './request'
-import type { FindOneAppUserResponse,FindOneAppUserInput,GetUserinfoResponse } from "./models";
+import type { {{ modelImports }} } from "./models";
 
-setBaseUrl('http://127.0.0.1:9991')
+setBaseUrl('{{baseURL}}')
 
 const s3Providers = {
+{{#each s3Provider }}
+  {{name}}: {
+    "endpoint" : "{{endpoint.staticVariableContent}}",
+    "bucketName" : "{{bucketName.staticVariableContent}}",
+    "useSSL" : {{useSSL}},
+  },
+{{/each}}
 }
 
 
@@ -25,11 +32,15 @@ function upload(serverName, filePath, fileName) {
 }
 export default {
   query: {
-    FindOneAppUser: buildQuery<FindOneAppUserResponse ,FindOneAppUserInput>('/operations/FindOneAppUser'),
-    GetUserinfo: buildQuery<GetUserinfoResponse>('/operations/GetUserinfo'),
+  {{#each queries}}
+    {{operationName}}: buildQuery<{{operationName}}Response{{#if hasInput}} ,{{operationName}}Input{{/if}}>('/operations/{{operationName}}'),
+  {{/each}}
   },
 
   mutation: {
+  {{#each mutations}}
+    {{operationName}}: buildMutation<{{operationName}}Response{{#if hasInput}} ,{{operationName}}Input{{/if}}>('/operations/{{operationName}}'),
+  {{/each}}
   },
   upload,
   setBaseUrl
