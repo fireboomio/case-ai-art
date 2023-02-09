@@ -18,9 +18,11 @@
     "isolatedModules": true,
     "baseUrl": "./",
     "rootDir": "./",
+    "outDir": "./",
     "paths": {
       "generated/*": ["./generated/*"]
     }
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": []
 }
