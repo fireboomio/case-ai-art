@@ -24,7 +24,7 @@ export async function reportShare(way) {
 export async  function queryUserInfo() {
   const result = await sdk.query.GetUserinfo()
   if (!result.errors) {
-    getApp().globalData.userInfo = result
+    getApp().globalData.userInfo = result.data?.data
   
     const pages = getCurrentPages()
     pages.forEach(page => {

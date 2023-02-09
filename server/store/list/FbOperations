@@ -1,9 +1,9 @@
 [
 	{
 		"content": "",
-		"createTime": "2023-02-09 17:14:38",
+		"createTime": "2023-02-09 17:55:09",
 		"enable": 1,
-		"id": 1250291443695616,
+		"id": 1250450766561280,
 		"isDel": 0,
 		"isPublic": 1,
 		"legal": 1,
@@ -15,13 +15,13 @@
 		"roleType": "",
 		"roles": "",
 		"title": "/FindOneAppUser",
-		"updateTime": "2023-02-09 17:17:41"
+		"updateTime": "2023-02-09 17:55:42"
 	},
 	{
 		"content": "",
-		"createTime": "2023-02-09 17:17:54",
+		"createTime": "2023-02-09 17:55:53",
 		"enable": 1,
-		"id": 1250304287113216,
+		"id": 1250453659713536,
 		"isDel": 0,
 		"isPublic": 2,
 		"legal": 1,
@@ -33,10 +33,10 @@
 		"roleType": "",
 		"roles": "",
 		"title": "/CreateOneAppUser",
-		"updateTime": "2023-02-09 17:18:12"
+		"updateTime": "2023-02-09 17:56:01"
 	},
 	{
-		"id": 1250320414474240,
+		"id": 1250454582722560,
 		"method": "GET",
 		"restUrl": "",
 		"operationType": "queries",
@@ -47,8 +47,8 @@
 		"title": "/GetUserinfo",
 		"content": "",
 		"enable": 1,
-		"createTime": "2023-02-09 17:22:00",
-		"updateTime": "2023-02-09 17:23:06",
+		"createTime": "2023-02-09 17:56:07",
+		"updateTime": "2023-02-09 17:56:13",
 		"isDel": 0,
 		"roleType": "",
 		"roles": ""
