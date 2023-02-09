@@ -3,6 +3,7 @@
   <view wx:for="{{column}}" class="column" wx:key="*this">
     <view wx:for="{{item.list}}" wx:key="url">
       <view class="item">
+      <view>{{item.id}}</view>
         <image bind:tap="toDetail" data-id="{{item.id}}" wx:if="{{item.show}}" class="image" mode="aspectFill" src="{{item.url}}" style="width:{{item.width}}rpx;height:{{item.height}}rpx"/>
         <view wx:else class="image" style="width:{{item.width}}rpx;height:{{item.height}}rpx"></view>
       </view>

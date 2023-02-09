@@ -1,5 +1,5 @@
 import { buildQuery, buildMutation, uploadFile, setAuthHeader, setBaseUrl, getBaseUrl } from './request'
-import type { CreateOnePointRecordResponse,CreateOnePointRecordInput,FindOneAppUserResponse,FindOneAppUserInput,GeneratePictureWithAIResponse,GeneratePictureWithAIInput,GetArtWorkDetailResponse,GetArtWorkDetailInput,GetMyAlbumResponse,GetMyAlbumInput,GetMyDraftsResponse,GetMyDraftsInput,GetMyLikedResponse,GetMyLikedInput,GetMyPointRecordsResponse,GetMyPointRecordsInput,GetMyPublicAlbumResponse,GetMyPublicAlbumInput,GetUserinfoResponse,GetWorksByHotResponse,GetWorksByHotInput,GetWorksByNewestResponse,GetWorksByNewestInput,GetWorksByRecommendResponse,GetWorksByRecommendInput,LikeOneArtWorkResponse,LikeOneArtWorkInput,MoveDraftToAlbumResponse,MoveDraftToAlbumInput,PublishMyArtWorkResponse,PublishMyArtWorkInput,RecordMyInviterResponse,RecordMyInviterInput,UnlikeOneArtWorkResponse,UnlikeOneArtWorkInput,UsePointsResponse } from "./models";
+import type { CreateOnePointRecordResponse,CreateOnePointRecordInput,FindOneAppUserResponse,FindOneAppUserInput,GeneratePictureWithAIResponse,GeneratePictureWithAIInput,GetArtWorkDetailResponse,GetArtWorkDetailInput,GetMyAlbumResponse,GetMyAlbumInput,GetMyDraftsResponse,GetMyDraftsInput,GetMyLikedResponse,GetMyLikedInput,GetMyPointRecordsResponse,GetMyPointRecordsInput,GetMyPublicAlbumResponse,GetMyPublicAlbumInput,GetUserinfoResponse,GetWorksByHotResponse,GetWorksByHotInput,GetWorksByNewestResponse,GetWorksByNewestInput,GetWorksByRecommendResponse,GetWorksByRecommendInput,LikeOneArtWorkResponse,LikeOneArtWorkInput,MoveDraftToAlbumResponse,MoveDraftToAlbumInput,PublishMyArtWorkResponse,PublishMyArtWorkInput,RecordMyInviterResponse,RecordMyInviterInput,UnlikeOneArtWorkResponse,UnlikeOneArtWorkInput,UsePointsResponse,UsePointsInput } from "./models";
 
 setBaseUrl('http://127.0.0.1:9991')
 
@@ -46,7 +46,7 @@ export default {
     PublishMyArtWork: buildMutation<PublishMyArtWorkResponse ,PublishMyArtWorkInput>('/operations/PublishMyArtWork'),
     RecordMyInviter: buildMutation<RecordMyInviterResponse ,RecordMyInviterInput>('/operations/RecordMyInviter'),
     UnlikeOneArtWork: buildMutation<UnlikeOneArtWorkResponse ,UnlikeOneArtWorkInput>('/operations/UnlikeOneArtWork'),
-    UsePoints: buildMutation<UsePointsResponse>('/operations/UsePoints'),
+    UsePoints: buildMutation<UsePointsResponse ,UsePointsInput>('/operations/UsePoints'),
   },
   upload,
   setBaseUrl

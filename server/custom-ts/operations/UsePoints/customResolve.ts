@@ -1,7 +1,6 @@
-import { HookRequestWithInput } from 'generated/fireboom.hooks'
-import { InjectedUsePointsInput, UsePointsResponse } from 'generated/models'
+import { HookRequest } from 'generated/fireboom.hooks'
 
-export default async function customResolve(hook: HookRequestWithInput<InjectedUsePointsInput>)
+export default async function customResolve(hook: HookRequest)
   //: Promise<void | UsePointsResponse>{ // 取消注释以使用严格的返回类型
   : Promise<any> {
   // TODO: 在此处添加代码
@@ -23,7 +22,6 @@ export default async function customResolve(hook: HookRequestWithInput<InjectedU
   // 修改用户积分
   await hook.internalClient.mutations.DecreasePoints({
     input: {
-      id: hook.input.id!,
       points: 1
     }
   })

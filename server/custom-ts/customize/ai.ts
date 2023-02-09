@@ -53,7 +53,7 @@ export default new GraphQLSchema({
           try {
             const client = new Client({})
             // 消耗积分
-            const resp = await client.mutation.UsePoints({})
+            const resp = await client.mutation.UsePoints({ input: { id: userId }})
             if (resp.status !== "ok" || resp?.body.errors) {
               throw resp
             }
