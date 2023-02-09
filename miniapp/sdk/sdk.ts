@@ -1,5 +1,5 @@
 import { buildQuery, buildMutation, uploadFile, setAuthHeader, setBaseUrl, getBaseUrl } from './request'
-import type { ConnectOneRoleMenuResponse,ConnectOneRoleMenuInput,ConnectOneUserRoleResponse,ConnectOneUserRoleInput,CreateOneMenuResponse,CreateOneMenuInput,CreateOneUserResponse,CreateOneUserInput,DeleteOneMenuResponse,DeleteOneMenuInput,DisconnectOneRoleMenuResponse,DisconnectOneRoleMenuInput,DisconnectOneUserRoleResponse,DisconnectOneUserRoleInput,GetMenuListResponse,GetOneMenuResponse,GetOneMenuInput,GetOneUserResponse,GetOneUserInput,GetRoleListResponse,GetRoleMenusResponse,GetRoleMenusInput,GetRoleUsersResponse,GetRoleUsersInput,GetUserListResponse,GetUserListInput,GetUserRoleMenuResponse,GetUserRoleMenuInput,GetUserRolesResponse,GetUserRolesInput,GetUsersWithoutRoleResponse,GetUsersWithoutRoleInput,UpdateOneMenuResponse,UpdateOneMenuInput } from "./models";
+import type { CreateOneAdminUserResponse,CreateOneAdminUserInput,DeleteOneArtWorkResponse,DeleteOneArtWorkInput,GetAppUserListResponse,GetAppUserListInput,GetArtWorkListResponse,GetArtWorkListInput,GetCountResponse,GetManyAdminUserResponse,GetOneAppUserResponse,GetOneAppUserInput,GetTodayCountResponse,GetTodayCountInput,UpdateOneAppUserResponse,UpdateOneAppUserInput } from "./models";
 
 setBaseUrl('http://127.0.0.1:9991')
 
@@ -25,27 +25,18 @@ function upload(serverName, filePath, fileName) {
 }
 export default {
   query: {
-    GetMenuList: buildQuery<GetMenuListResponse>('/operations/GetMenuList'),
-    GetOneMenu: buildQuery<GetOneMenuResponse ,GetOneMenuInput>('/operations/GetOneMenu'),
-    GetOneUser: buildQuery<GetOneUserResponse ,GetOneUserInput>('/operations/GetOneUser'),
-    GetRoleList: buildQuery<GetRoleListResponse>('/operations/GetRoleList'),
-    GetRoleMenus: buildQuery<GetRoleMenusResponse ,GetRoleMenusInput>('/operations/GetRoleMenus'),
-    GetRoleUsers: buildQuery<GetRoleUsersResponse ,GetRoleUsersInput>('/operations/GetRoleUsers'),
-    GetUserList: buildQuery<GetUserListResponse ,GetUserListInput>('/operations/GetUserList'),
-    GetUserRoleMenu: buildQuery<GetUserRoleMenuResponse ,GetUserRoleMenuInput>('/operations/GetUserRoleMenu'),
-    GetUserRoles: buildQuery<GetUserRolesResponse ,GetUserRolesInput>('/operations/GetUserRoles'),
-    GetUsersWithoutRole: buildQuery<GetUsersWithoutRoleResponse ,GetUsersWithoutRoleInput>('/operations/GetUsersWithoutRole'),
+    GetAppUserList: buildQuery<GetAppUserListResponse ,GetAppUserListInput>('/operations/GetAppUserList'),
+    GetArtWorkList: buildQuery<GetArtWorkListResponse ,GetArtWorkListInput>('/operations/GetArtWorkList'),
+    GetCount: buildQuery<GetCountResponse>('/operations/GetCount'),
+    GetManyAdminUser: buildQuery<GetManyAdminUserResponse>('/operations/GetManyAdminUser'),
+    GetOneAppUser: buildQuery<GetOneAppUserResponse ,GetOneAppUserInput>('/operations/GetOneAppUser'),
+    GetTodayCount: buildQuery<GetTodayCountResponse ,GetTodayCountInput>('/operations/GetTodayCount'),
   },
 
   mutation: {
-    ConnectOneRoleMenu: buildMutation<ConnectOneRoleMenuResponse ,ConnectOneRoleMenuInput>('/operations/ConnectOneRoleMenu'),
-    ConnectOneUserRole: buildMutation<ConnectOneUserRoleResponse ,ConnectOneUserRoleInput>('/operations/ConnectOneUserRole'),
-    CreateOneMenu: buildMutation<CreateOneMenuResponse ,CreateOneMenuInput>('/operations/CreateOneMenu'),
-    CreateOneUser: buildMutation<CreateOneUserResponse ,CreateOneUserInput>('/operations/CreateOneUser'),
-    DeleteOneMenu: buildMutation<DeleteOneMenuResponse ,DeleteOneMenuInput>('/operations/DeleteOneMenu'),
-    DisconnectOneRoleMenu: buildMutation<DisconnectOneRoleMenuResponse ,DisconnectOneRoleMenuInput>('/operations/DisconnectOneRoleMenu'),
-    DisconnectOneUserRole: buildMutation<DisconnectOneUserRoleResponse ,DisconnectOneUserRoleInput>('/operations/DisconnectOneUserRole'),
-    UpdateOneMenu: buildMutation<UpdateOneMenuResponse ,UpdateOneMenuInput>('/operations/UpdateOneMenu'),
+    CreateOneAdminUser: buildMutation<CreateOneAdminUserResponse ,CreateOneAdminUserInput>('/operations/CreateOneAdminUser'),
+    DeleteOneArtWork: buildMutation<DeleteOneArtWorkResponse ,DeleteOneArtWorkInput>('/operations/DeleteOneArtWork'),
+    UpdateOneAppUser: buildMutation<UpdateOneAppUserResponse ,UpdateOneAppUserInput>('/operations/UpdateOneAppUser'),
   },
   upload,
   setBaseUrl

@@ -1,5 +1,5 @@
 {
-  "authenticationQueriesRequired": false,
+  "authenticationQueriesRequired": true,
   "authenticationMutationsRequired": false,
   "authenticationSubscriptionsRequired": false,
   "enable": false,

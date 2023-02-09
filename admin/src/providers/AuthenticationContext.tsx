@@ -47,9 +47,9 @@ export function AuthenticationProvider({ children }: { children?: ReactNode }) {
   }, [])
 
   const logout = useCallback(() => {
-    return axios.get('/auth/cookie/user/logout').then(() => {
-      window.location.href = '/login'
-    })
+    axios.get('/auth/cookie/user/logout', {
+        params: { logout_openid_connect_provider: 'true' }
+      })
   }, [])
 
   const fetchUserPermissions = useCallback(async (user?: UserInfo) => {

@@ -1,4 +1,3 @@
-
 import { AuthenticationHookRequest } from 'fireboom-wundersdk/server'
 import { Client } from 'generated/fireboom.client'
 export default async function postAuthentication(hook: AuthenticationHookRequest) : Promise<void>{
@@ -26,31 +25,24 @@ export default async function postAuthentication(hook: AuthenticationHookRequest
         }
       })
     }
-  }else  if (hook.user) {
+  } else if (hook.user) {
     const client = new Client({})
     const { avatarUrl, provider, providerId, userId } = hook.user
     const { email, name, nickName } = hook.user.idToken as any
-    const resp = await client.query.GetOneUser({
-      input: {
-        // provider: provider!,
-        providerId: providerId!,
-        providerUserId: userId!
-      }
-    })
+    const resp = await client.query.GetManyAdminUser({})
+
     if (resp.status === 'ok') {
       if (!resp.body.errors) {
         const existedUser = resp.body.data!.data
         if (!existedUser) {
-          const _name = nickName || name || email || '新用户'
-          const rest = await client.mutation.CreateOneUser({
+          const _name = nickName || name || email || ''
+          const rest = await client.mutation.CreateOneAdminUser({
             input: {
-              data: {
-                name: _name,
-                provider: provider!,
-                providerId: providerId!,
-                providerUserId: userId!,
-                avatarUrl: avatarUrl
-              }
+              name: _name,
+              provider: provider!,
+              providerId: providerId!,
+              providerUserId: userId!,
+              avatarUrl: avatarUrl
             }
           })
           if (rest.status === 'ok') {

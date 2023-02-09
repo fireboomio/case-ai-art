@@ -1,20 +1,22 @@
-import { Refine, ResourceProps } from '@pankod/refine-core'
-import { notificationProvider, Layout, ReadyPage, ErrorComponent, Result } from '@pankod/refine-antd'
+import {Refine, ResourceProps} from '@pankod/refine-core'
+import {notificationProvider, Layout, ReadyPage, ErrorComponent, Result} from '@pankod/refine-antd'
 
 import '@pankod/refine-antd/dist/styles.min.css'
 // import 'antd/es/style/variable.less'
 import routerProvider from '@pankod/refine-react-router-v6'
 import AntConfigProvider from './providers/AntConfigProvider'
-import { LoginPage } from './features/oidc/login'
+import {LoginPage} from './features/oidc/login'
 
 import CallbackPage from './features/oidc/callback'
-import { useAuth } from './providers/AuthenticationContext'
-import { FireboomDataProvider, OperationDataProvider } from './providers/dataProvider'
-import { UserList } from './features/identity/user'
-import { RoleList } from './features/identity/role'
-import { MenuList } from './features/identity/menu'
-import { ApiList } from './features/identity/permission'
-import { PetCreate, PetEdit, PetList, PetShow } from './features/pet'
+import {useAuth} from './providers/AuthenticationContext'
+import {FireboomDataProvider, OperationDataProvider} from './providers/dataProvider'
+import {RoleList} from './features/identity/role'
+import {MenuList} from './features/identity/menu'
+import {ApiList} from './features/identity/permission'
+import {ArtWorkCreate, ArtWorkEdit, ArtWorkList, ArtWorkShow} from './features/artwork'
+import {AppUserCreate, AppUserEdit, AppUserList, AppUserShow} from './features/user'
+import {DashboardList} from './features/dashboard'
+
 
 // const allResources = {
 //   User: {
@@ -38,7 +40,7 @@ import { PetCreate, PetEdit, PetList, PetShow } from './features/pet'
 // }
 
 function App() {
-  const { isAuthenticated, user, isLoading, logout, menus } = useAuth()
+  const {isAuthenticated, user, isLoading, logout, menus} = useAuth()
 
   if (isLoading) {
     return <div>loading..</div>
@@ -69,13 +71,13 @@ function App() {
   // console.log(resources)
 
   return (
-    <AntConfigProvider theme={{ primaryColor: '#F21212' }}>
+    <AntConfigProvider theme={{primaryColor: '#F21212'}}>
       <Refine
         notificationProvider={notificationProvider}
         Layout={Layout}
         LoginPage={LoginPage}
         ReadyPage={ReadyPage}
-        catchAll={<ErrorComponent />}
+        catchAll={<ErrorComponent/>}
         authProvider={{
           login: () => {
             console.log('auth login')
@@ -116,11 +118,11 @@ function App() {
           routes: [
             {
               path: '/oidc/callback',
-              element: <CallbackPage />,
+              element: <CallbackPage/>,
             },
             {
               path: '/500',
-              element: <Result status="500" title="500" subTitle="Sorry, something went wrong." />,
+              element: <Result status="500" title="500" subTitle="Sorry, something went wrong."/>,
             },
           ],
         }}
@@ -130,11 +132,32 @@ function App() {
         }}
         resources={[
           {
-            name: 'Pet',
-            list: PetList,
-            create: PetCreate,
-            edit: PetEdit,
-            show: PetShow,
+            options: {
+              label: '作品列表',
+            },
+            key: 'Role',
+            name: 'ArtWork',
+            list: ArtWorkList,
+            create: ArtWorkCreate,
+            edit: ArtWorkEdit,
+            show: ArtWorkShow,
+          },
+          {
+            options: {
+              label: '用户列表',
+            },
+            name: 'AppUser',
+            list: AppUserList,
+            create: AppUserCreate,
+            edit: AppUserEdit,
+            show: AppUserShow,
+          },
+          {
+            options: {
+              label: '数据统计',
+            },
+            name: 'Dashboard',
+            list: DashboardList,
           }
         ]}
       />
