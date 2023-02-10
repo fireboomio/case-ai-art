@@ -14,10 +14,11 @@ export function recordInviter(options) {
  * @param way ShareToFriend, ShareToGroup, Invite, WatchAD
  * @returns {Promise<void>}
  */
-export async function reportShare(way) {
+export async function reportShare(way: string, userId: string) {
   void sdk.mutation.CreateOnePointRecord({
     way,
-    point: 0
+    point: 0,
+    userId
   })
 }
 export async  function queryUserInfo() {

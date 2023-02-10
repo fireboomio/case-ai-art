@@ -29,8 +29,9 @@ Page({
     console.log('watchAd')
   },
   onShareAppMessage(e) {
-    reportShare('ShareToFriend')
-    const path = "/pages/chuangzuo/chuangzuo?inviterId=" + getApp().globalData.userInfo.id;
+    const userId = getApp().globalData.userInfo.id;
+    reportShare('ShareToFriend', userId)
+    const path = "/pages/chuangzuo/chuangzuo?inviterId=" + userId;
     return {
       title: "我在这里发现了一个好玩的小程序，快来看看吧",
       path
