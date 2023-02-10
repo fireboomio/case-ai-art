@@ -1,5 +1,5 @@
 <view class="flex-col page">
-  <view class="flex-col flex-auto group_2">
+  <view wx:if="{{!detailId}}" class="flex-col flex-auto group_2">
     <view class="flex-row justify-center items-center">
       <Star />
       <text class="text_3">草/稿/集</text>
@@ -19,12 +19,16 @@
     <view class="flex-row list grid">
       <image
         class="pos_10 image_8"
-        src="../../assets/aeb2b7dd840660833e79a0c5d180c6bc.png"
-        wx:key="*this"
+        src="{{item.url}}"
+        wx:key="id"
         wx:for-item="item"
         wx:for-index="i"
-        wx:for="{{list_2NZoalqQ}}"
+        wx:for="{{list}}"
+        bind:tap="onClickItem"
+        data-id="{{item.id}}"
+        data-url="{{item.url}}"
       />
     </view>
   </view>
+  <wancheng wx:else backText="返回" artId="{{detailId}}" url="{{detailUrl}}" bindfinish="onFinish" />
 </view>

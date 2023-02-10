@@ -12,13 +12,16 @@ Component({
     },
     url: {
       type: String
+    },
+    backText: {
+      type: String
     }
   },
   methods: {
     saveImage() {
       saveImage(this.properties.url)
     },
-    reset() {
+    onBack() {
       this.triggerEvent('finish', {})
     },
     viewImage() {

@@ -1,7 +1,7 @@
 <!-- <wxs src="../../utils/utils.wxs" module="utils"/>  -->
 <block>
   <zhizuozhong wx:if="{{loading}}" />
-  <wancheng wx:elif="{{generatedUrl}}" artId="{{generatedId}}" url="{{generatedUrl}}" bindfinish="resetState" />
+  <wancheng wx:elif="{{generatedUrl}}" backText="返回首页" artId="{{generatedId}}" url="{{generatedUrl}}" bindfinish="resetState" />
   <view wx:else class="flex-col page">
     <view class="flex-col flex-auto justify-start group_2">
         <view class="flex-col group_3">

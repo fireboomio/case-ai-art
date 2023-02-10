@@ -7,7 +7,7 @@
     </view>
     <image class="image_generated" mode="aspectFit" src="{{url}}" bindtap="viewImage" />
     <view class="flex-row justify-center group_4 space-x-19">
-      <view class="flex-col justify-start items-center btn_1" bindtap="reset">返回首页</view>
+      <view class="flex-col justify-start items-center btn_1" bindtap="onBack">{{backText}}</view>
       <view class="flex-col justify-start items-center btn_1" bindtap="saveImage">下载</view>
       <view class="flex-col justify-start items-center btn_2" bindtap="moveToAlbum">移至画册</view>
     </view>

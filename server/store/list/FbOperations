@@ -342,22 +342,22 @@
 		"updateTime": "2023-02-09 19:48:48"
 	},
 	{
+		"content": "",
+		"createTime": "2023-02-09 19:49:58",
+		"enable": 1,
 		"id": 1250902248456192,
-		"method": "GET",
-		"restUrl": "",
-		"operationType": "queries",
+		"isDel": 0,
 		"isPublic": 1,
-		"remark": "",
 		"legal": 1,
 		"liveQuery": 0,
-		"title": "/GetMyDrafts",
-		"content": "",
-		"enable": 1,
-		"createTime": "2023-02-09 19:49:58",
-		"updateTime": "2023-02-10 14:44:07",
-		"isDel": 0,
+		"method": "GET",
+		"operationType": "queries",
+		"remark": "",
+		"restUrl": "",
 		"roleType": "",
-		"roles": ""
+		"roles": "",
+		"title": "/GetMyDrafts",
+		"updateTime": "2023-02-10 14:44:07"
 	},
 	{
 		"content": "",
@@ -610,5 +610,23 @@
 		"roles": "",
 		"title": "/GetArtWorkList",
 		"updateTime": "2023-02-09 22:35:56"
+	},
+	{
+		"id": 1255474649104384,
+		"method": "GET",
+		"restUrl": "",
+		"operationType": "queries",
+		"isPublic": 1,
+		"remark": "",
+		"legal": 1,
+		"liveQuery": 0,
+		"title": "/GetDraftItems",
+		"content": "",
+		"enable": 1,
+		"createTime": "2023-02-10 15:12:47",
+		"updateTime": "2023-02-10 15:22:50",
+		"isDel": 0,
+		"roleType": "",
+		"roles": ""
 	}
 ]

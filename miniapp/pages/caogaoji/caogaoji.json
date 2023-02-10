@@ -3,6 +3,7 @@
   "navigationBarTextStyle": "black",
   "navigationBarBackgroundColor": "#f8f8f8",
   "usingComponents": {
-    "Star": "../../components/Star/Star"
+    "Star": "../../components/Star/Star",
+    "wancheng": "../chuangzuo/components/wancheng/wancheng"
   }
 }

@@ -9,7 +9,7 @@ import {HttpError, useExport} from '@pankod/refine-core'
 
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-import ECharts from '@/components/ECharts'
+import ECharts from '@/components/Echarts'
 import {useCustom} from '@pankod/refine-core'
 
 
