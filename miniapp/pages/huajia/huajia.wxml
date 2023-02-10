@@ -19,8 +19,8 @@
       <scroll-view wx:else="" class="scroll-view" scroll-y bindrefresherrefresh="refresh" bindscrolltolower="loadMore" refresher-enabled refresher-triggered="{{refreshing}}" refresher-threshold="{{100}}">
         <view class="grid">
           <view class="flex-col grid-item justify-center items-center" wx:key="id" wx:for="{{list}}" data-id="{{item.id}}" bindtap="toDetail">
-            <image class="image_4" mode="widthFix" src="{{item.url}}" />
-            <text wx:if="{{activeTab==0}}" class="font_1">{{item.i}}个创作</text>
+            <image class="image_4" mode="widthFix" src="{{item.url || item.artWork.url}}" />
+            <text wx:if="{{activeTab==0}}" class="font_1">{{item.count.ArtWork}}个创作</text>
             <view wx:if="{{activeTab===2||activeTab===3}}" class="flex-row items-center group_4">
               <image src="../../assets/fenxiang.png" class="fenxiang_icon" />
               <text>{{item.sharedCount}}</text>

@@ -1,651 +1,4 @@
 
-
-
-export interface art_AppUserOrderByWithRelationInput {
-LikeRecord?: art_LikeRecordOrderByRelationAggregateInput
-other_AppUser?: art_AppUserOrderByRelationAggregateInput
-points?: string
-createdAt?: string
-inviteById?: string
-nickname?: string
-Creation?: art_CreationOrderByRelationAggregateInput
-phone?: string
-providerId?: string
-id?: string
-provider?: string
-AppUser?: art_AppUserOrderByWithRelationInput
-PointRecord?: art_PointRecordOrderByRelationAggregateInput
-avatar?: string
-}
-
-export interface art_ArtWorkOrderByWithRelationInput {
-LikeRecord?: art_LikeRecordOrderByRelationAggregateInput
-creationId?: string
-id?: string
-recommendRate?: string
-Creation?: art_CreationOrderByWithRelationInput
-likeCount?: string
-publishAt?: string
-published?: string
-sharedCount?: string
-url?: string
-isDraft?: string
-}
-
-export interface art_AppUserCreateManyAppUserInputEnvelope {
-data?: art_AppUserCreateManyAppUserInput[],skipDuplicates?: boolean
-}
-
-export interface art_ArtWorkCreateNestedOneWithoutLikeRecordInput {
-connect?: art_ArtWorkWhereUniqueInput
-connectOrCreate?: art_ArtWorkCreateOrConnectWithoutLikeRecordInput
-create?: art_ArtWorkCreateWithoutLikeRecordInput
-}
-
-export interface art_PointRecordCreateManyAppUserInputEnvelope {
-data?: art_PointRecordCreateManyAppUserInput[],skipDuplicates?: boolean
-}
-
-export interface art_LikeRecordCreateManyArtWorkInputEnvelope {
-data?: art_LikeRecordCreateManyArtWorkInput[],skipDuplicates?: boolean
-}
-
-export interface art_LikeRecordCreateNestedManyWithoutAppUserInput {
-connect?: art_LikeRecordWhereUniqueInput
-connectOrCreate?: art_LikeRecordCreateOrConnectWithoutAppUserInput
-create?: art_LikeRecordCreateWithoutAppUserInput
-createMany?: art_LikeRecordCreateManyAppUserInputEnvelope
-}
-
-export interface art_CreationCreateNestedOneWithoutArtWorkInput {
-connectOrCreate?: art_CreationCreateOrConnectWithoutArtWorkInput
-create?: art_CreationCreateWithoutArtWorkInput
-connect?: art_CreationWhereUniqueInput
-}
-
-export interface art_IntFilter {
-gte?: number
-in?: number[],lt?: number
-lte?: number
-not?: art_NestedIntFilter
-notIn?: number[],equals?: number
-gt?: number
-}
-
-export interface art_ArtWorkOrderByRelationAggregateInput {
-_count?: string
-}
-
-export interface art_AppUserCreateWithoutOther_AppUserInput {
-AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
-LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
-createdAt?: string
-points?: number
-phone?: string
-provider?: string
-providerId?: string
-Creation?: art_CreationCreateNestedManyWithoutAppUserInput
-PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
-avatar?: string
-id?: string
-nickname?: string
-}
-
-export interface art_ArtWorkCreateOrConnectWithoutLikeRecordInput {
-create?: art_ArtWorkCreateWithoutLikeRecordInput
-where?: art_ArtWorkWhereUniqueInput
-}
-
-export interface art_AppUserCreateOrConnectWithoutAppUserInput {
-where?: art_AppUserWhereUniqueInput
-create?: art_AppUserCreateWithoutAppUserInput
-}
-
-export interface art_LikeRecordWhereUniqueInput {
-id?: number
-}
-
-export interface art_AppUserCreateInput {
-providerId: string
-PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
-id: string
-other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
-avatar: string
-createdAt?: string
-nickname: string
-phone?: string
-points?: number
-AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
-Creation?: art_CreationCreateNestedManyWithoutAppUserInput
-LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
-provider: string
-}
-
-export interface art_CreationListRelationFilter {
-every?: art_CreationWhereInput
-none?: art_CreationWhereInput
-some?: art_CreationWhereInput
-}
-
-export interface art_CreationWhereInput {
-createdAt?: art_DateTimeFilter
-AppUser?: art_AppUserRelationFilter
-ArtWork?: art_ArtWorkListRelationFilter
-NOT?: art_CreationWhereInput
-args?: art_StringFilter
-authorId?: art_StringFilter
-AND?: art_CreationWhereInput
-OR?: art_CreationWhereInput[],id?: art_IntFilter
-}
-
-export interface art_LikeRecordCreateManyArtWorkInput {
-userId?: string
-createdAt?: string
-id?: number
-}
-
-export interface art_ArtWorkCreateManyCreationInputEnvelope {
-data?: art_ArtWorkCreateManyCreationInput[],skipDuplicates?: boolean
-}
-
-export interface art_CreationCreateWithoutArtWorkInput {
-AppUser?: art_AppUserCreateNestedOneWithoutCreationInput
-args?: string
-createdAt?: string
-}
-
-export interface art_DateTimeNullableFilter {
-gt?: string
-gte?: string
-in?: string[],lt?: string
-lte?: string
-not?: art_NestedDateTimeNullableFilter
-notIn?: string[],equals?: string
-}
-
-export interface art_ArtWorkCreateNestedManyWithoutCreationInput {
-connect?: art_ArtWorkWhereUniqueInput
-connectOrCreate?: art_ArtWorkCreateOrConnectWithoutCreationInput
-create?: art_ArtWorkCreateWithoutCreationInput
-createMany?: art_ArtWorkCreateManyCreationInputEnvelope
-}
-
-export interface art_LikeRecordCreateManyAppUserInput {
-artWorkId?: number
-createdAt?: string
-id?: number
-}
-
-export interface art_CreationCreateManyAppUserInputEnvelope {
-data?: art_CreationCreateManyAppUserInput[],skipDuplicates?: boolean
-}
-
-export interface art_CreationCreateOrConnectWithoutArtWorkInput {
-create?: art_CreationCreateWithoutArtWorkInput
-where?: art_CreationWhereUniqueInput
-}
-
-export interface art_LikeRecordCreateOrConnectWithoutArtWorkInput {
-create?: art_LikeRecordCreateWithoutArtWorkInput
-where?: art_LikeRecordWhereUniqueInput
-}
-
-export interface art_LikeRecordWhereInput {
-userId?: art_StringFilter
-ArtWork?: art_ArtWorkRelationFilter
-NOT?: art_LikeRecordWhereInput
-OR?: art_LikeRecordWhereInput[],createdAt?: art_DateTimeFilter
-AND?: art_LikeRecordWhereInput
-AppUser?: art_AppUserRelationFilter
-artWorkId?: art_IntFilter
-id?: art_IntFilter
-}
-
-export interface art_LikeRecordListRelationFilter {
-every?: art_LikeRecordWhereInput
-none?: art_LikeRecordWhereInput
-some?: art_LikeRecordWhereInput
-}
-
-export interface art_NestedIntFilter {
-notIn?: number[],equals?: number
-gt?: number
-gte?: number
-in?: number[],lt?: number
-lte?: number
-not?: art_NestedIntFilter
-}
-
-export interface art_LikeRecordCreateWithoutAppUserInput {
-ArtWork?: art_ArtWorkCreateNestedOneWithoutLikeRecordInput
-createdAt?: string
-}
-
-export interface art_CreationCreateManyAppUserInput {
-args?: string
-createdAt?: string
-id?: number
-}
-
-export interface art_AppUserRelationFilter {
-is?: art_AppUserWhereInput
-isNot?: art_AppUserWhereInput
-}
-
-export interface art_PointRecordWhereInput {
-AND?: art_PointRecordWhereInput
-NOT?: art_PointRecordWhereInput
-userId?: art_StringFilter
-way?: art_EnumPointRecord_wayFilter
-AppUser?: art_AppUserRelationFilter
-OR?: art_PointRecordWhereInput[],createdAt?: art_DateTimeFilter
-id?: art_IntFilter
-point?: art_IntFilter
-}
-
-export interface art_AppUserOrderByRelationAggregateInput {
-_count?: string
-}
-
-export interface art_AppUserListRelationFilter {
-every?: art_AppUserWhereInput
-none?: art_AppUserWhereInput
-some?: art_AppUserWhereInput
-}
-
-export interface art_AppUserCreateNestedOneWithoutLikeRecordInput {
-connect?: art_AppUserWhereUniqueInput
-connectOrCreate?: art_AppUserCreateOrConnectWithoutLikeRecordInput
-create?: art_AppUserCreateWithoutLikeRecordInput
-}
-
-export interface art_DateTimeFilter {
-lte?: string
-not?: art_NestedDateTimeFilter
-notIn?: string[],equals?: string
-gt?: string
-gte?: string
-in?: string[],lt?: string
-}
-
-export interface art_AppUserCreateOrConnectWithoutLikeRecordInput {
-create?: art_AppUserCreateWithoutLikeRecordInput
-where?: art_AppUserWhereUniqueInput
-}
-
-export interface art_PointRecordListRelationFilter {
-every?: art_PointRecordWhereInput
-none?: art_PointRecordWhereInput
-some?: art_PointRecordWhereInput
-}
-
-export interface art_PointRecordWhereUniqueInput {
-id?: number
-}
-
-export interface art_LikeRecordCreateNestedManyWithoutArtWorkInput {
-connect?: art_LikeRecordWhereUniqueInput
-connectOrCreate?: art_LikeRecordCreateOrConnectWithoutArtWorkInput
-create?: art_LikeRecordCreateWithoutArtWorkInput
-createMany?: art_LikeRecordCreateManyArtWorkInputEnvelope
-}
-
-export interface art_NestedDateTimeFilter {
-lte?: string
-not?: art_NestedDateTimeFilter
-notIn?: string[],equals?: string
-gt?: string
-gte?: string
-in?: string[],lt?: string
-}
-
-export interface art_ArtWorkCreateWithoutLikeRecordInput {
-publishAt?: string
-published?: boolean
-recommendRate?: number
-sharedCount?: number
-url?: string
-Creation?: art_CreationCreateNestedOneWithoutArtWorkInput
-isDraft?: boolean
-likeCount?: number
-}
-
-export interface art_LikeRecordCreateOrConnectWithoutAppUserInput {
-create?: art_LikeRecordCreateWithoutAppUserInput
-where?: art_LikeRecordWhereUniqueInput
-}
-
-export interface art_AppUserCreateWithoutAppUserInput {
-LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
-id?: string
-nickname?: string
-points?: number
-providerId?: string
-provider?: string
-Creation?: art_CreationCreateNestedManyWithoutAppUserInput
-PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
-avatar?: string
-createdAt?: string
-other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
-phone?: string
-}
-
-export interface art_ArtWorkCreateOrConnectWithoutCreationInput {
-create?: art_ArtWorkCreateWithoutCreationInput
-where?: art_ArtWorkWhereUniqueInput
-}
-
-export interface art_AppUserCreateNestedOneWithoutOther_AppUserInput {
-connect?: art_AppUserWhereUniqueInput
-connectOrCreate?: art_AppUserCreateOrConnectWithoutOther_AppUserInput
-create?: art_AppUserCreateWithoutOther_AppUserInput
-}
-
-export interface art_NestedBoolFilter {
-equals?: boolean
-not?: art_NestedBoolFilter
-}
-
-export interface art_NestedStringFilter {
-in?: string[],lt?: string
-endsWith?: string
-equals?: string
-gte?: string
-lte?: string
-not?: art_NestedStringFilter
-notIn?: string[],startsWith?: string
-contains?: string
-gt?: string
-}
-
-export interface art_ArtWorkWhereUniqueInput {
-id?: number
-}
-
-export interface art_LikeRecordCreateWithoutArtWorkInput {
-AppUser?: art_AppUserCreateNestedOneWithoutLikeRecordInput
-createdAt?: string
-}
-
-export interface art_CreationCreateWithoutAppUserInput {
-ArtWork?: art_ArtWorkCreateNestedManyWithoutCreationInput
-args?: string
-createdAt?: string
-}
-
-export interface art_CreationOrderByRelationAggregateInput {
-_count?: string
-}
-
-export interface art_CreationCreateOrConnectWithoutAppUserInput {
-create?: art_CreationCreateWithoutAppUserInput
-where?: art_CreationWhereUniqueInput
-}
-
-export interface art_NestedStringNullableFilter {
-endsWith?: string
-equals?: string
-gt?: string
-lte?: string
-startsWith?: string
-contains?: string
-gte?: string
-in?: string[],lt?: string
-not?: art_NestedStringNullableFilter
-notIn?: string[],}
-
-export interface art_PointRecordCreateManyAppUserInput {
-id?: number
-point?: number
-way?: string
-createdAt?: string
-}
-
-export interface art_AppUserCreateWithoutCreationInput {
-AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
-LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
-PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
-nickname: string
-other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
-phone?: string
-points?: number
-provider: string
-providerId: string
-avatar: string
-createdAt?: string
-id: string
-}
-
-export interface art_LikeRecordOrderByRelationAggregateInput {
-_count?: string
-}
-
-export interface art_NestedDateTimeNullableFilter {
-gt?: string
-gte?: string
-in?: string[],lt?: string
-lte?: string
-not?: art_NestedDateTimeNullableFilter
-notIn?: string[],equals?: string
-}
-
-export interface art_PointRecordCreateNestedManyWithoutAppUserInput {
-create?: art_PointRecordCreateWithoutAppUserInput
-createMany?: art_PointRecordCreateManyAppUserInputEnvelope
-connect?: art_PointRecordWhereUniqueInput
-connectOrCreate?: art_PointRecordCreateOrConnectWithoutAppUserInput
-}
-
-export interface art_AppUserCreateManyAppUserInput {
-provider?: string
-providerId?: string
-avatar?: string
-createdAt?: string
-id?: string
-nickname?: string
-phone?: string
-points?: number
-}
-
-export interface art_PointRecordCreateWithoutAppUserInput {
-createdAt?: string
-point?: number
-way?: string
-}
-
-export interface art_ArtWorkRelationFilter {
-is?: art_ArtWorkWhereInput
-isNot?: art_ArtWorkWhereInput
-}
-
-export interface art_CreationRelationFilter {
-is?: art_CreationWhereInput
-isNot?: art_CreationWhereInput
-}
-
-export interface art_EnumPointRecord_wayFilter {
-equals?: string
-in?: string[],not?: string
-notIn?: string[],}
-
-export interface art_AppUserWhereInput {
-other_AppUser?: art_AppUserListRelationFilter
-providerId?: art_StringFilter
-Creation?: art_CreationListRelationFilter
-PointRecord?: art_PointRecordListRelationFilter
-avatar?: art_StringFilter
-nickname?: art_StringFilter
-phone?: art_StringNullableFilter
-createdAt?: art_DateTimeFilter
-points?: art_IntFilter
-AppUser?: art_AppUserRelationFilter
-LikeRecord?: art_LikeRecordListRelationFilter
-NOT?: art_AppUserWhereInput
-inviteById?: art_StringNullableFilter
-provider?: art_StringFilter
-AND?: art_AppUserWhereInput
-OR?: art_AppUserWhereInput[],id?: art_StringFilter
-}
-
-export interface art_ArtWorkCreateWithoutCreationInput {
-likeCount?: number
-publishAt?: string
-published?: boolean
-recommendRate?: number
-sharedCount?: number
-url?: string
-LikeRecord?: art_LikeRecordCreateNestedManyWithoutArtWorkInput
-isDraft?: boolean
-}
-
-export interface art_ArtWorkCreateManyCreationInput {
-publishAt?: string
-published?: boolean
-recommendRate?: number
-sharedCount?: number
-url?: string
-id?: number
-isDraft?: boolean
-likeCount?: number
-}
-
-export interface art_LikeRecordCreateManyAppUserInputEnvelope {
-data?: art_LikeRecordCreateManyAppUserInput[],skipDuplicates?: boolean
-}
-
-export interface art_PointRecordCreateOrConnectWithoutAppUserInput {
-create?: art_PointRecordCreateWithoutAppUserInput
-where?: art_PointRecordWhereUniqueInput
-}
-
-export interface art_CreationCreateNestedManyWithoutAppUserInput {
-createMany?: art_CreationCreateManyAppUserInputEnvelope
-connect?: art_CreationWhereUniqueInput
-connectOrCreate?: art_CreationCreateOrConnectWithoutAppUserInput
-create?: art_CreationCreateWithoutAppUserInput
-}
-
-export interface art_BoolFilter {
-equals?: boolean
-not?: art_NestedBoolFilter
-}
-
-export interface art_StringFilter {
-endsWith?: string
-equals?: string
-gt?: string
-gte?: string
-lt?: string
-not?: art_NestedStringFilter
-contains?: string
-in?: string[],lte?: string
-notIn?: string[],startsWith?: string
-}
-
-export interface art_ArtWorkListRelationFilter {
-every?: art_ArtWorkWhereInput
-none?: art_ArtWorkWhereInput
-some?: art_ArtWorkWhereInput
-}
-
-export interface art_AppUserCreateOrConnectWithoutCreationInput {
-create?: art_AppUserCreateWithoutCreationInput
-where?: art_AppUserWhereUniqueInput
-}
-
-export interface art_CreationWhereUniqueInput {
-id?: number
-}
-
-export interface art_CreationOrderByWithRelationInput {
-args?: string
-authorId?: string
-createdAt?: string
-id?: string
-AppUser?: art_AppUserOrderByWithRelationInput
-ArtWork?: art_ArtWorkOrderByRelationAggregateInput
-}
-
-export interface art_ArtWorkWhereInput {
-creationId?: art_IntFilter
-sharedCount?: art_IntFilter
-AND?: art_ArtWorkWhereInput
-likeCount?: art_IntFilter
-NOT?: art_ArtWorkWhereInput
-isDraft?: art_BoolFilter
-published?: art_BoolFilter
-LikeRecord?: art_LikeRecordListRelationFilter
-OR?: art_ArtWorkWhereInput[],id?: art_IntFilter
-publishAt?: art_DateTimeNullableFilter
-recommendRate?: art_IntFilter
-url?: art_StringFilter
-Creation?: art_CreationRelationFilter
-}
-
-export interface art_PointRecordOrderByRelationAggregateInput {
-_count?: string
-}
-
-export interface art_AppUserWhereUniqueInput {
-id?: string
-}
-
-export interface art_AppUserCreateNestedManyWithoutAppUserInput {
-connectOrCreate?: art_AppUserCreateOrConnectWithoutAppUserInput
-create?: art_AppUserCreateWithoutAppUserInput
-createMany?: art_AppUserCreateManyAppUserInputEnvelope
-connect?: art_AppUserWhereUniqueInput
-}
-
-export interface art_AppUserCreateNestedOneWithoutCreationInput {
-create?: art_AppUserCreateWithoutCreationInput
-connect?: art_AppUserWhereUniqueInput
-connectOrCreate?: art_AppUserCreateOrConnectWithoutCreationInput
-}
-
-export interface art_StringNullableFilter {
-notIn?: string[],startsWith?: string
-contains?: string
-equals?: string
-gte?: string
-in?: string[],not?: art_NestedStringNullableFilter
-endsWith?: string
-gt?: string
-lt?: string
-lte?: string
-}
-
-export interface art_AppUserCreateOrConnectWithoutOther_AppUserInput {
-create?: art_AppUserCreateWithoutOther_AppUserInput
-where?: art_AppUserWhereUniqueInput
-}
-
-export interface art_AppUserCreateWithoutLikeRecordInput {
-createdAt?: string
-nickname: string
-other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
-phone?: string
-provider: string
-AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
-Creation?: art_CreationCreateNestedManyWithoutAppUserInput
-PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
-providerId: string
-avatar: string
-id: string
-points?: number
-}
-
-export type JSONValue = string | number | boolean | JSONObject | Array<JSONValue>;
-
-export type JSONObject = { [key: string]: JSONValue };
-
-export interface GraphQLError {
-    message: string;
-    path?: ReadonlyArray<string | number>;
-}
-
-
-
 export interface CreateOneAppUserInput {
 data: art_AppUserCreateInput
 }
@@ -686,9 +39,9 @@ args: string
 }
 
 export interface GetAppUserListInput {
-orderBy?: art_AppUserOrderByWithRelationInput[],query?: art_AppUserWhereInput
 skip?: number
 take?: number
+orderBy?: art_AppUserOrderByWithRelationInput[],query?: art_AppUserWhereInput
 }
 
 export interface GetArtWorkDetailInput {
@@ -702,8 +55,8 @@ skip?: number
 }
 
 export interface GetMyAlbumInput {
-take?: number
 skip?: number
+take?: number
 }
 
 export interface GetMyDraftsInput {
@@ -795,14 +148,14 @@ args: string
 }
 
 export interface InternalCreateOneDraftInput {
-url: string
 creationId: number
+url: string
 }
 
 export interface InternalCreateOnePointRecordInput {
+point: number
 userId: string
 way: string
-point: number
 }
 
 export interface InternalDecreaseArtWorkLikeCountInput {
@@ -826,9 +179,9 @@ args: string
 }
 
 export interface InternalGetAppUserListInput {
-skip?: number
 take?: number
 orderBy?: art_AppUserOrderByWithRelationInput[],query?: art_AppUserWhereInput
+skip?: number
 }
 
 export interface InternalGetArtWorkDetailInput {
@@ -857,8 +210,8 @@ take?: number
 }
 
 export interface InternalGetMyPointRecordsInput {
-timeStart: string
-way?: string[],}
+way?: string[],timeStart: string
+}
 
 export interface InternalGetMyPublicAlbumInput {
 skip?: number
@@ -879,13 +232,13 @@ take?: number
 }
 
 export interface InternalGetWorksByNewestInput {
-skip?: number
 take?: number
+skip?: number
 }
 
 export interface InternalGetWorksByRecommendInput {
-take?: number
 skip?: number
+take?: number
 }
 
 export interface InternalIncreaseArtWorkLikeCountInput {
@@ -941,9 +294,9 @@ url: string
 }
 
 export interface InjectedCreateOnePointRecordInput {
-way: string
 point: number
 userId: string
+way: string
 }
 
 export interface InjectedDecreaseArtWorkLikeCountInput {
@@ -964,14 +317,14 @@ id: string
 }
 
 export interface InjectedGeneratePictureWithAIInput {
-args: string
 userId: string
+args: string
 }
 
 export interface InjectedGetAppUserListInput {
-take?: number
 orderBy?: art_AppUserOrderByWithRelationInput[],query?: art_AppUserWhereInput
 skip?: number
+take?: number
 }
 
 export interface InjectedGetArtWorkDetailInput {
@@ -980,28 +333,28 @@ userId: string
 }
 
 export interface InjectedGetArtWorkListInput {
-query?: art_ArtWorkWhereInput
+orderBy?: art_ArtWorkOrderByWithRelationInput[],query?: art_ArtWorkWhereInput
 skip?: number
 take?: number
-orderBy?: art_ArtWorkOrderByWithRelationInput[],}
+}
 
 export interface InjectedGetMyAlbumInput {
-skip?: number
 take?: number
 userId: string
+skip?: number
 }
 
 export interface InjectedGetMyDraftsInput {
-userId: string
 creationId: number
 skip?: number
 take?: number
+userId: string
 }
 
 export interface InjectedGetMyLikedInput {
+skip?: number
 take?: number
 userId: string
-skip?: number
 }
 
 export interface InjectedGetMyPointRecordsInput {
@@ -1010,9 +363,9 @@ way?: string[],timeStart: string
 }
 
 export interface InjectedGetMyPublicAlbumInput {
+skip?: number
 take?: number
 userId: string
-skip?: number
 }
 
 export interface InjectedGetOneAppUserInput {
@@ -1305,15 +658,15 @@ data?: {
 AppUser?: {
 id: string
 },
-inviteById?: string
-points: number
-provider: string
-providerId: string
-avatar: string
 createdAt: string
-id: string
+inviteById?: string
 nickname: string
 phone?: string
+providerId: string
+avatar: string
+id: string
+points: number
+provider: string
 },
 }
 
@@ -1325,28 +678,26 @@ url?: string
 }
 
 export interface GetAppUserListResponseData {
-total: number
 data: {
-id: string
-points: number
-providerId: string
-avatar: string
-createdAt: string
 inviteById?: string
+points: number
+avatar: string
+id: string
 nickname: string
 phone?: string
 provider: string
-}[],}
+providerId: string
+createdAt: string
+}[],total: number
+}
 
 export interface GetArtWorkDetailResponseData {
 data?: {
-args: string
-isDraft: boolean
+id: number
+likeCount: number
 likeRecords?: {
 id: number
 }[],published: boolean
-id: number
-likeCount: number
 sharedCount: number
 url: string
 user: {
@@ -1354,30 +705,32 @@ avatar: string
 id: string
 nickname: string
 },
+args: string
+isDraft: boolean
 },
 }
 
 export interface GetArtWorkListResponseData {
 data: {
-Creation: {
-AppUser: {
-id: string
-nickname: string
-},
-args: string
-authorId: string
-createdAt: string
-id: number
-},
-creationId: number
-id: number
 isDraft: boolean
 likeCount: number
 published: boolean
 url: string
-publishAt?: string
+creationId: number
+id: number
 recommendRate: number
 sharedCount: number
+Creation: {
+args: string
+authorId: string
+createdAt: string
+id: number
+AppUser: {
+id: string
+nickname: string
+},
+},
+publishAt?: string
 }[],total: number
 }
 
@@ -1396,32 +749,34 @@ _all: number
 
 export interface GetMyAlbumResponseData {
 data: {
+id: number
 likeCount: number
 publishAt?: string
 published: boolean
 recommendRate: number
 sharedCount: number
 url: string
-id: number
 }[],}
 
 export interface GetMyDraftsResponseData {
 data: {
 artWork: {
-id: number
 url: string
+id: number
 },
-count: number
+count: {
+ArtWork: number
+},
 id: number
 }[],}
 
 export interface GetMyLikedResponseData {
 data: {
 artWork: {
+url: string
 id: number
 likeCount: number
 sharedCount: number
-url: string
 },
 }[],}
 
@@ -1433,23 +788,23 @@ way: JSONValue
 
 export interface GetMyPublicAlbumResponseData {
 data: {
-url: string
 id: number
 likeCount: number
 sharedCount: number
+url: string
 }[],}
 
 export interface GetOneAppUserResponseData {
 data?: {
 avatar: string
-createdAt: string
-inviteById?: string
-nickname: string
-providerId: string
 id: string
+nickname: string
 phone?: string
 points: number
 provider: string
+providerId: string
+createdAt: string
+inviteById?: string
 },
 }
 
@@ -1463,20 +818,20 @@ _all: number
 
 export interface GetUserinfoResponseData {
 data?: {
+points: number
 avatar: string
 id: string
 nickname: string
 phone?: string
-points: number
 },
 }
 
 export interface GetWorksByHotResponseData {
 data: {
+likeCount: number
 sharedCount: number
 url: string
 id: number
-likeCount: number
 }[],}
 
 export interface GetWorksByNewestResponseData {
@@ -1528,9 +883,9 @@ id: number
 
 export interface PublishMyArtWorkResponseData {
 data?: {
+id: number
 publishAt?: string
 published: boolean
-id: number
 },
 }
 
@@ -1556,6 +911,653 @@ export interface UsePointsResponseData {
 data?: {
 id: number
 },
+}
+
+
+
+
+
+export interface art_DateTimeNullableFilter {
+equals?: string
+gt?: string
+gte?: string
+in?: string[],lt?: string
+lte?: string
+not?: art_NestedDateTimeNullableFilter
+notIn?: string[],}
+
+export interface art_EnumPointRecord_wayFilter {
+notIn?: string[],equals?: string
+in?: string[],not?: string
+}
+
+export interface art_CreationOrderByRelationAggregateInput {
+_count?: string
+}
+
+export interface art_CreationCreateWithoutArtWorkInput {
+AppUser: art_AppUserCreateNestedOneWithoutCreationInput
+args: string
+createdAt?: string
+}
+
+export interface art_AppUserCreateNestedOneWithoutLikeRecordInput {
+connectOrCreate?: art_AppUserCreateOrConnectWithoutLikeRecordInput
+create?: art_AppUserCreateWithoutLikeRecordInput
+connect?: art_AppUserWhereUniqueInput
+}
+
+export interface art_AppUserWhereUniqueInput {
+id?: string
+}
+
+export interface art_CreationCreateOrConnectWithoutArtWorkInput {
+create?: art_CreationCreateWithoutArtWorkInput
+where?: art_CreationWhereUniqueInput
+}
+
+export interface art_AppUserCreateNestedOneWithoutCreationInput {
+connect?: art_AppUserWhereUniqueInput
+connectOrCreate?: art_AppUserCreateOrConnectWithoutCreationInput
+create?: art_AppUserCreateWithoutCreationInput
+}
+
+export interface art_ArtWorkWhereInput {
+likeCount?: art_IntFilter
+published?: art_BoolFilter
+recommendRate?: art_IntFilter
+url?: art_StringFilter
+isDraft?: art_BoolFilter
+publishAt?: art_DateTimeNullableFilter
+Creation?: art_CreationRelationFilter
+NOT?: art_ArtWorkWhereInput
+id?: art_IntFilter
+creationId?: art_IntFilter
+sharedCount?: art_IntFilter
+AND?: art_ArtWorkWhereInput
+LikeRecord?: art_LikeRecordListRelationFilter
+OR?: art_ArtWorkWhereInput[],}
+
+export interface art_AppUserCreateOrConnectWithoutOther_AppUserInput {
+where?: art_AppUserWhereUniqueInput
+create?: art_AppUserCreateWithoutOther_AppUserInput
+}
+
+export interface art_LikeRecordCreateManyAppUserInput {
+artWorkId?: number
+createdAt?: string
+id?: number
+}
+
+export interface art_PointRecordOrderByRelationAggregateInput {
+_count?: string
+}
+
+export interface art_AppUserListRelationFilter {
+every?: art_AppUserWhereInput
+none?: art_AppUserWhereInput
+some?: art_AppUserWhereInput
+}
+
+export interface art_CreationWhereInput {
+NOT?: art_CreationWhereInput
+OR?: art_CreationWhereInput[],args?: art_StringFilter
+createdAt?: art_DateTimeFilter
+AND?: art_CreationWhereInput
+ArtWork?: art_ArtWorkListRelationFilter
+id?: art_IntFilter
+AppUser?: art_AppUserRelationFilter
+authorId?: art_StringFilter
+}
+
+export interface art_ArtWorkCreateNestedOneWithoutLikeRecordInput {
+connect?: art_ArtWorkWhereUniqueInput
+connectOrCreate?: art_ArtWorkCreateOrConnectWithoutLikeRecordInput
+create?: art_ArtWorkCreateWithoutLikeRecordInput
+}
+
+export interface art_CreationWhereUniqueInput {
+id?: number
+}
+
+export interface art_LikeRecordCreateWithoutAppUserInput {
+ArtWork?: art_ArtWorkCreateNestedOneWithoutLikeRecordInput
+createdAt?: string
+}
+
+export interface art_CreationRelationFilter {
+is?: art_CreationWhereInput
+isNot?: art_CreationWhereInput
+}
+
+export interface art_NestedStringFilter {
+not?: art_NestedStringFilter
+contains?: string
+endsWith?: string
+gte?: string
+in?: string[],lt?: string
+equals?: string
+gt?: string
+lte?: string
+notIn?: string[],startsWith?: string
+}
+
+export interface art_StringNullableFilter {
+endsWith?: string
+equals?: string
+in?: string[],lt?: string
+lte?: string
+not?: art_NestedStringNullableFilter
+notIn?: string[],contains?: string
+startsWith?: string
+gte?: string
+gt?: string
+}
+
+export interface art_LikeRecordCreateNestedManyWithoutArtWorkInput {
+connect?: art_LikeRecordWhereUniqueInput
+connectOrCreate?: art_LikeRecordCreateOrConnectWithoutArtWorkInput
+create?: art_LikeRecordCreateWithoutArtWorkInput
+createMany?: art_LikeRecordCreateManyArtWorkInputEnvelope
+}
+
+export interface art_CreationCreateNestedManyWithoutAppUserInput {
+create?: art_CreationCreateWithoutAppUserInput
+createMany?: art_CreationCreateManyAppUserInputEnvelope
+connect?: art_CreationWhereUniqueInput
+connectOrCreate?: art_CreationCreateOrConnectWithoutAppUserInput
+}
+
+export interface art_AppUserCreateWithoutLikeRecordInput {
+other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
+points?: number
+avatar?: string
+createdAt?: string
+id?: string
+nickname?: string
+phone?: string
+AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
+Creation?: art_CreationCreateNestedManyWithoutAppUserInput
+PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
+provider?: string
+providerId?: string
+}
+
+export interface art_ArtWorkWhereUniqueInput {
+id?: number
+}
+
+export interface art_LikeRecordCreateManyArtWorkInputEnvelope {
+skipDuplicates?: boolean
+data?: art_LikeRecordCreateManyArtWorkInput[],}
+
+export interface art_PointRecordWhereInput {
+AppUser?: art_AppUserRelationFilter
+NOT?: art_PointRecordWhereInput
+OR?: art_PointRecordWhereInput[],userId?: art_StringFilter
+way?: art_EnumPointRecord_wayFilter
+AND?: art_PointRecordWhereInput
+id?: art_IntFilter
+point?: art_IntFilter
+createdAt?: art_DateTimeFilter
+}
+
+export interface art_PointRecordCreateOrConnectWithoutAppUserInput {
+create?: art_PointRecordCreateWithoutAppUserInput
+where?: art_PointRecordWhereUniqueInput
+}
+
+export interface art_AppUserCreateWithoutAppUserInput {
+avatar?: string
+createdAt?: string
+other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
+phone?: string
+provider?: string
+Creation?: art_CreationCreateNestedManyWithoutAppUserInput
+PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
+nickname?: string
+points?: number
+providerId?: string
+LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
+id?: string
+}
+
+export interface art_ArtWorkRelationFilter {
+is?: art_ArtWorkWhereInput
+isNot?: art_ArtWorkWhereInput
+}
+
+export interface art_NestedStringNullableFilter {
+equals?: string
+gt?: string
+in?: string[],lt?: string
+lte?: string
+not?: art_NestedStringNullableFilter
+endsWith?: string
+gte?: string
+notIn?: string[],startsWith?: string
+contains?: string
+}
+
+export interface art_ArtWorkOrderByWithRelationInput {
+creationId?: string
+publishAt?: string
+sharedCount?: string
+url?: string
+Creation?: art_CreationOrderByWithRelationInput
+LikeRecord?: art_LikeRecordOrderByRelationAggregateInput
+likeCount?: string
+published?: string
+recommendRate?: string
+id?: string
+isDraft?: string
+}
+
+export interface art_PointRecordCreateNestedManyWithoutAppUserInput {
+connect?: art_PointRecordWhereUniqueInput
+connectOrCreate?: art_PointRecordCreateOrConnectWithoutAppUserInput
+create?: art_PointRecordCreateWithoutAppUserInput
+createMany?: art_PointRecordCreateManyAppUserInputEnvelope
+}
+
+export interface art_AppUserCreateManyAppUserInput {
+points?: number
+provider?: string
+providerId?: string
+avatar?: string
+createdAt?: string
+id?: string
+nickname?: string
+phone?: string
+}
+
+export interface art_ArtWorkCreateOrConnectWithoutCreationInput {
+create?: art_ArtWorkCreateWithoutCreationInput
+where?: art_ArtWorkWhereUniqueInput
+}
+
+export interface art_AppUserCreateOrConnectWithoutCreationInput {
+create?: art_AppUserCreateWithoutCreationInput
+where?: art_AppUserWhereUniqueInput
+}
+
+export interface art_AppUserOrderByRelationAggregateInput {
+_count?: string
+}
+
+export interface art_AppUserRelationFilter {
+is?: art_AppUserWhereInput
+isNot?: art_AppUserWhereInput
+}
+
+export interface art_LikeRecordCreateOrConnectWithoutArtWorkInput {
+create?: art_LikeRecordCreateWithoutArtWorkInput
+where?: art_LikeRecordWhereUniqueInput
+}
+
+export interface art_CreationCreateWithoutAppUserInput {
+ArtWork?: art_ArtWorkCreateNestedManyWithoutCreationInput
+args?: string
+createdAt?: string
+}
+
+export interface art_AppUserCreateNestedManyWithoutAppUserInput {
+connectOrCreate?: art_AppUserCreateOrConnectWithoutAppUserInput
+create?: art_AppUserCreateWithoutAppUserInput
+createMany?: art_AppUserCreateManyAppUserInputEnvelope
+connect?: art_AppUserWhereUniqueInput
+}
+
+export interface art_DateTimeFilter {
+lte?: string
+not?: art_NestedDateTimeFilter
+notIn?: string[],equals?: string
+gt?: string
+gte?: string
+in?: string[],lt?: string
+}
+
+export interface art_LikeRecordListRelationFilter {
+some?: art_LikeRecordWhereInput
+every?: art_LikeRecordWhereInput
+none?: art_LikeRecordWhereInput
+}
+
+export interface art_CreationListRelationFilter {
+every?: art_CreationWhereInput
+none?: art_CreationWhereInput
+some?: art_CreationWhereInput
+}
+
+export interface art_LikeRecordWhereInput {
+AppUser?: art_AppUserRelationFilter
+ArtWork?: art_ArtWorkRelationFilter
+NOT?: art_LikeRecordWhereInput
+artWorkId?: art_IntFilter
+createdAt?: art_DateTimeFilter
+id?: art_IntFilter
+userId?: art_StringFilter
+AND?: art_LikeRecordWhereInput
+OR?: art_LikeRecordWhereInput[],}
+
+export interface art_NestedIntFilter {
+notIn?: number[],equals?: number
+gt?: number
+gte?: number
+in?: number[],lt?: number
+lte?: number
+not?: art_NestedIntFilter
+}
+
+export interface art_PointRecordCreateManyAppUserInputEnvelope {
+data?: art_PointRecordCreateManyAppUserInput[],skipDuplicates?: boolean
+}
+
+export interface art_LikeRecordCreateManyAppUserInputEnvelope {
+data?: art_LikeRecordCreateManyAppUserInput[],skipDuplicates?: boolean
+}
+
+export interface art_NestedDateTimeFilter {
+lt?: string
+lte?: string
+not?: art_NestedDateTimeFilter
+notIn?: string[],equals?: string
+gt?: string
+gte?: string
+in?: string[],}
+
+export interface art_BoolFilter {
+equals?: boolean
+not?: art_NestedBoolFilter
+}
+
+export interface art_PointRecordWhereUniqueInput {
+id?: number
+}
+
+export interface art_ArtWorkCreateOrConnectWithoutLikeRecordInput {
+create?: art_ArtWorkCreateWithoutLikeRecordInput
+where?: art_ArtWorkWhereUniqueInput
+}
+
+export interface art_CreationOrderByWithRelationInput {
+AppUser?: art_AppUserOrderByWithRelationInput
+ArtWork?: art_ArtWorkOrderByRelationAggregateInput
+args?: string
+authorId?: string
+createdAt?: string
+id?: string
+}
+
+export interface art_AppUserCreateNestedOneWithoutOther_AppUserInput {
+create?: art_AppUserCreateWithoutOther_AppUserInput
+connect?: art_AppUserWhereUniqueInput
+connectOrCreate?: art_AppUserCreateOrConnectWithoutOther_AppUserInput
+}
+
+export interface art_AppUserCreateOrConnectWithoutAppUserInput {
+create?: art_AppUserCreateWithoutAppUserInput
+where?: art_AppUserWhereUniqueInput
+}
+
+export interface art_AppUserCreateWithoutOther_AppUserInput {
+Creation?: art_CreationCreateNestedManyWithoutAppUserInput
+LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
+id?: string
+nickname?: string
+phone?: string
+points?: number
+providerId?: string
+AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
+PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
+avatar?: string
+createdAt?: string
+provider?: string
+}
+
+export interface art_CreationCreateManyAppUserInputEnvelope {
+data?: art_CreationCreateManyAppUserInput[],skipDuplicates?: boolean
+}
+
+export interface art_PointRecordListRelationFilter {
+every?: art_PointRecordWhereInput
+none?: art_PointRecordWhereInput
+some?: art_PointRecordWhereInput
+}
+
+export interface art_StringFilter {
+endsWith?: string
+equals?: string
+gt?: string
+gte?: string
+lt?: string
+lte?: string
+not?: art_NestedStringFilter
+notIn?: string[],startsWith?: string
+contains?: string
+in?: string[],}
+
+export interface art_AppUserOrderByWithRelationInput {
+points?: string
+providerId?: string
+AppUser?: art_AppUserOrderByWithRelationInput
+phone?: string
+nickname?: string
+PointRecord?: art_PointRecordOrderByRelationAggregateInput
+id?: string
+other_AppUser?: art_AppUserOrderByRelationAggregateInput
+provider?: string
+Creation?: art_CreationOrderByRelationAggregateInput
+avatar?: string
+inviteById?: string
+LikeRecord?: art_LikeRecordOrderByRelationAggregateInput
+createdAt?: string
+}
+
+export interface art_AppUserWhereInput {
+OR?: art_AppUserWhereInput[],avatar?: art_StringFilter
+id?: art_StringFilter
+phone?: art_StringNullableFilter
+AND?: art_AppUserWhereInput
+NOT?: art_AppUserWhereInput
+createdAt?: art_DateTimeFilter
+nickname?: art_StringFilter
+AppUser?: art_AppUserRelationFilter
+points?: art_IntFilter
+provider?: art_StringFilter
+providerId?: art_StringFilter
+Creation?: art_CreationListRelationFilter
+LikeRecord?: art_LikeRecordListRelationFilter
+PointRecord?: art_PointRecordListRelationFilter
+inviteById?: art_StringNullableFilter
+other_AppUser?: art_AppUserListRelationFilter
+}
+
+export interface art_ArtWorkCreateManyCreationInputEnvelope {
+data?: art_ArtWorkCreateManyCreationInput[],skipDuplicates?: boolean
+}
+
+export interface art_PointRecordCreateManyAppUserInput {
+createdAt?: string
+id?: number
+point?: number
+way?: string
+}
+
+export interface art_AppUserCreateManyAppUserInputEnvelope {
+data?: art_AppUserCreateManyAppUserInput[],skipDuplicates?: boolean
+}
+
+export interface art_AppUserCreateOrConnectWithoutLikeRecordInput {
+create?: art_AppUserCreateWithoutLikeRecordInput
+where?: art_AppUserWhereUniqueInput
+}
+
+export interface art_NestedDateTimeNullableFilter {
+equals?: string
+gt?: string
+gte?: string
+in?: string[],lt?: string
+lte?: string
+not?: art_NestedDateTimeNullableFilter
+notIn?: string[],}
+
+export interface art_ArtWorkOrderByRelationAggregateInput {
+_count?: string
+}
+
+export interface art_ArtWorkCreateNestedManyWithoutCreationInput {
+connectOrCreate?: art_ArtWorkCreateOrConnectWithoutCreationInput
+create?: art_ArtWorkCreateWithoutCreationInput
+createMany?: art_ArtWorkCreateManyCreationInputEnvelope
+connect?: art_ArtWorkWhereUniqueInput
+}
+
+export interface art_ArtWorkCreateWithoutCreationInput {
+recommendRate?: number
+sharedCount?: number
+url?: string
+LikeRecord?: art_LikeRecordCreateNestedManyWithoutArtWorkInput
+isDraft?: boolean
+likeCount?: number
+publishAt?: string
+published?: boolean
+}
+
+export interface art_ArtWorkCreateManyCreationInput {
+likeCount?: number
+publishAt?: string
+published?: boolean
+recommendRate?: number
+sharedCount?: number
+url?: string
+id?: number
+isDraft?: boolean
+}
+
+export interface art_LikeRecordOrderByRelationAggregateInput {
+_count?: string
+}
+
+export interface art_AppUserCreateInput {
+AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
+LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
+createdAt?: string
+id: string
+other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
+providerId: string
+Creation?: art_CreationCreateNestedManyWithoutAppUserInput
+PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
+avatar: string
+nickname: string
+phone?: string
+points?: number
+provider: string
+}
+
+export interface art_LikeRecordCreateManyArtWorkInput {
+userId?: string
+createdAt?: string
+id?: number
+}
+
+export interface art_AppUserCreateWithoutCreationInput {
+PointRecord?: art_PointRecordCreateNestedManyWithoutAppUserInput
+avatar?: string
+createdAt?: string
+id?: string
+other_AppUser?: art_AppUserCreateNestedManyWithoutAppUserInput
+providerId?: string
+AppUser?: art_AppUserCreateNestedOneWithoutOther_AppUserInput
+LikeRecord?: art_LikeRecordCreateNestedManyWithoutAppUserInput
+nickname?: string
+phone?: string
+points?: number
+provider?: string
+}
+
+export interface art_LikeRecordCreateOrConnectWithoutAppUserInput {
+create?: art_LikeRecordCreateWithoutAppUserInput
+where?: art_LikeRecordWhereUniqueInput
+}
+
+export interface art_NestedBoolFilter {
+equals?: boolean
+not?: art_NestedBoolFilter
+}
+
+export interface art_ArtWorkListRelationFilter {
+every?: art_ArtWorkWhereInput
+none?: art_ArtWorkWhereInput
+some?: art_ArtWorkWhereInput
+}
+
+export interface art_CreationCreateNestedOneWithoutArtWorkInput {
+connect?: art_CreationWhereUniqueInput
+connectOrCreate?: art_CreationCreateOrConnectWithoutArtWorkInput
+create?: art_CreationCreateWithoutArtWorkInput
+}
+
+export interface art_LikeRecordCreateWithoutArtWorkInput {
+AppUser?: art_AppUserCreateNestedOneWithoutLikeRecordInput
+createdAt?: string
+}
+
+export interface art_CreationCreateManyAppUserInput {
+createdAt?: string
+id?: number
+args?: string
+}
+
+export interface art_CreationCreateOrConnectWithoutAppUserInput {
+create?: art_CreationCreateWithoutAppUserInput
+where?: art_CreationWhereUniqueInput
+}
+
+export interface art_IntFilter {
+gt?: number
+gte?: number
+in?: number[],lt?: number
+lte?: number
+not?: art_NestedIntFilter
+notIn?: number[],equals?: number
+}
+
+export interface art_LikeRecordWhereUniqueInput {
+id?: number
+}
+
+export interface art_LikeRecordCreateNestedManyWithoutAppUserInput {
+connect?: art_LikeRecordWhereUniqueInput
+connectOrCreate?: art_LikeRecordCreateOrConnectWithoutAppUserInput
+create?: art_LikeRecordCreateWithoutAppUserInput
+createMany?: art_LikeRecordCreateManyAppUserInputEnvelope
+}
+
+export interface art_PointRecordCreateWithoutAppUserInput {
+createdAt?: string
+point: number
+way: string
+}
+
+export interface art_ArtWorkCreateWithoutLikeRecordInput {
+publishAt?: string
+published?: boolean
+recommendRate?: number
+sharedCount?: number
+url: string
+Creation: art_CreationCreateNestedOneWithoutArtWorkInput
+isDraft?: boolean
+likeCount?: number
+}
+
+export type JSONValue = string | number | boolean | JSONObject | Array<JSONValue>;
+
+export type JSONObject = { [key: string]: JSONValue };
+
+export interface GraphQLError {
+    message: string;
+    path?: ReadonlyArray<string | number>;
 }
 
 
