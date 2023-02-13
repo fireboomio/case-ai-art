@@ -3,11 +3,13 @@
     <view class="flex-col">
       <view class="flex-row items-center section space-x-13">
         <view class="flex-col justify-start items-center image-wrapper">
-          <image class="image_avatar" src="{{userInfo.avatar}}" wx:if="{{userId}}"></image>
+          <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" wx:if="{{userId}}">
+            <image class="image_avatar" src="{{userInfo.avatar}}"></image>
+          </button>
           <image bind:tap="goLogin" class="image_6" src="../../assets/fc1525594a4625d0e4a65d0a7be40889.png" wx:else/>
         </view>
         <view class="flex-col items-start flex-auto space-y-3">
-          <text class="font_2 text_3">{{userInfo.nickname || ''}}</text>
+          <input type="nickname" class="font_2 text_3" value="{{userInfo.nickname||''}}" bindchange="changeNickname"/>
           <text class="font_3">ID:{{userId}}</text>
           <view class="flex-col justify-start items-center text-wrapper_2">
             <text class="font_3">魔法值:{{points}}</text>

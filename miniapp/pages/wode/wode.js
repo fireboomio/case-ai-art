@@ -1,4 +1,5 @@
 import {queryUserInfo, reportShare} from "../../utils/util";
+import sdk from '../../sdk/sdk'
 
 Page({
   localUserId: null,
@@ -33,6 +34,24 @@ Page({
     wx.navigateTo({
       url: '/pages/task/index',
     })
+  },
+  async changeNickname(e){
+    // console.log(e)
+    // this.setData({'userInfo.nickname': e.detail.value})
+    const nickname = e.detail.value
+    await sdk.mutation.UpdateUserBaseinfo({
+      nickname,
+      avatar: this.data.userInfo.avatar
+    })
+    await queryUserInfo()
+  },
+  async onChooseAvatar(e){
+    const avatar = e.detail.avatarUrl
+    await sdk.mutation.UpdateUserBaseinfo({
+      nickname: this.data.userInfo.nickname,
+      avatar
+    })
+    await queryUserInfo()
   },
   async loadUser() {
     const userId = getApp().globalData.userInfo?.id
