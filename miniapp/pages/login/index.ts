@@ -13,8 +13,7 @@ Page({
         if (inviterId && userId) {
           sdk.mutation.RecordMyInviter(
             {
-              inviterId: Number(inviterId),
-              userId
+              inviterId
             }
           )
         }
