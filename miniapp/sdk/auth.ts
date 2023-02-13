@@ -7,11 +7,19 @@ let poolName: string | null = null
 export default {
   async init(options: AuthingOptions & { poolName: string }) {
     poolName = options.poolName
+    const authAppId = options.appId
     authing = new Authing(options)
     const [err, res] = await authing.getLoginState()
     if (res && res.access_token) {
       setAuthHeader(`Bearer ${res.access_token}`)
       return true
+    } else {
+      try {
+        wx.removeStorageSync(`authing:${authAppId}:wx-login-code`)
+      } catch (e) {
+        console.error(e)
+      }
+      authing.logout()
     }
   },
   async login() {
