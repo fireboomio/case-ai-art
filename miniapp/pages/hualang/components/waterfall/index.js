@@ -71,10 +71,10 @@ Component({
     },
     async process(list) {
       const urlIdMap = {}
-      const newList = list.filter(item => !this.data.imgInfoMap[item.url]).map(x => {
-        urlIdMap[x.url] = x.id
-        return x.url
+      list.forEach(item => {
+        urlIdMap[item.url] = item.id
       })
+      const newList = list.filter(item => !this.data.imgInfoMap[item.url]).map(x => x.url)
       const refreshFlag = this.data.lastSize + newList.length !== list.length
       this.data.lastSize = list.length
       await this.batchLoadImg(newList)
@@ -97,6 +97,7 @@ Component({
           const {width, height} = this.data.imgInfoMap[item]
           const scale = height / width
           const h = Math.round(317 * scale)
+          console.log(urlIdMap, item)
           const img = {url: imgInfo.path, width: 317, height: h, top: height0,id:urlIdMap[item]}
           if (height0 <= height1) {
             list0.push(img)
