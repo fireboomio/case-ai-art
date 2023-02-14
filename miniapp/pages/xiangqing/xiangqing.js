@@ -98,6 +98,7 @@ Page({
   },
   async onLoad(query) {
     const user = getApp().globalData.userInfo
+    console.log(user,'====')
     if (user) {
       this.setData({ userId: user.id })
     }

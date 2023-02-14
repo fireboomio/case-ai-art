@@ -119,6 +119,7 @@
   margin-top: 20rpx;
   font-size: 24rpx;
   color: #666;
+  line-height: 30rpx;
 }
 
 .fenxiang_icon,

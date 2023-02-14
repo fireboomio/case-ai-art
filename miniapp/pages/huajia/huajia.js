@@ -1,6 +1,6 @@
 import sdk from '../../sdk/sdk'
 import { requireAuth } from '../../utils/util'
-
+import watershed from './watershed'
 Page({
   data: {
     user: null,
@@ -44,8 +44,13 @@ Page({
       take: this.data.pageSize
     })
     if (ret.data?.data?.length) {
+      ret.data.data.forEach(item => {
+        item.url = item.artWork?.url || item.url
+      })
       const list = this.data.activeTab === 3 ? ret.data.data.map(item => item.artWork) : ret.data.data
       const target = { list: [...this.data.list, ...list]}
+      const extraHeight = [82,48,48,98][this.data.activeTab]
+      target.lists = await watershed(target.list, 153, 31)
       if (this.data.refreshing) {
         target['refreshing'] = false
       }

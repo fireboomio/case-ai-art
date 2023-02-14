@@ -131,6 +131,7 @@ Component({
               this.data.imgInfoMap[url] = res
             },
             fail: (err) => {
+              console.error(err)
               this.data.imgInfoMap[url] = {}
             }, complete: () => {
               const next = list.pop()
