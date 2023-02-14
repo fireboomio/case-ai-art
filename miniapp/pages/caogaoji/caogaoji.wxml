@@ -6,10 +6,10 @@
       <Star class="image_1" />
     </view>
     <view class="flex-col group_3">
-      <view class="flex-row items-center group_4">
-        <text class="font_2 text_4">咒语：小狗</text>
-        <text class="font_2 text_5">（点击可复制咒语）</text>
-      </view>
+<!--      <view class="flex-row items-center group_4">-->
+<!--        <text class="font_2 text_4">咒语：小狗</text>-->
+<!--        <text class="font_2 text_5">（点击可复制咒语）</text>-->
+<!--      </view>-->
       <view class="flex-row justify-center items-center space-x-12">
         <view class="section"></view>
         <image class="image_7" src="../../assets/b0717f97a3f9ee004029194155d52960.png" />

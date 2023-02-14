@@ -34,3 +34,14 @@ npm run build
 ```bash
 npm run start
 ```
+
+生产环境启动方式
+```ts
+cd server 
+./fireboom build
+systemctl restart fb
+```
+查看生产环境authKey
+```ts
+systemctl status fb
+```
