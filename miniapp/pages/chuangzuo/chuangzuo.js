@@ -108,6 +108,10 @@ Page({
           generatedUrl: ret.data.data.url
         })
       } else {
+        wx.showToast({
+          title: ret.errors?.message || '生成失败，请稍后再试',
+          icon: 'error'
+        })
         this.setData({
           loading: false
         })
