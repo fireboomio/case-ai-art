@@ -36,9 +36,11 @@
             <panel icon="🏷️" title="咒语风格">
             <view wx:for="{{styleArr}}" wx:key="*this" data-item="{{item}}" data-selected="selectedStyle" bindtap="onSelect" class="flex-col text-wrapper_2 justify-start items-center {{selectedStyle === item? 'selected' : ''}}">{{item}}</view>
             </panel>
+            <view class="section_4_wrapper">
             <view class="flex-row justify-evenly items-center self-center section_4" bindtap="submit">
-            <text class="font_5 text_9">🎨</text>
-            <text class="font_4 text_10">施法</text>
+                <text class="font_5 text_9">🎨</text>
+                <text class="font_4 text_10">施法</text>
+            </view>
             </view>
         </view>
         </view>
