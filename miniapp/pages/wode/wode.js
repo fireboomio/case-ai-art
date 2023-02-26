@@ -47,9 +47,10 @@ Page({
   },
   async onChooseAvatar(e){
     const avatar = e.detail.avatarUrl
+    const uploadUrl = await sdk.upload('turingart', avatar, `avatar_${Date.now()}.jpg`)
     await sdk.mutation.UpdateUserBaseinfo({
       nickname: this.data.userInfo.nickname,
-      avatar
+      avatar: uploadUrl
     })
     await queryUserInfo()
   },
