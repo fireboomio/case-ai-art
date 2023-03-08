@@ -2,7 +2,7 @@ import auth from "./sdk/auth";
 import sdk from "./sdk/sdk";
 import {queryUserInfo} from "./utils/util";
 
-sdk.setBaseUrl('https://fb.tulingzhihui.cn')
+sdk.setBaseUrl('http://localhost:9991')
 
 App({
   async onLaunch() {

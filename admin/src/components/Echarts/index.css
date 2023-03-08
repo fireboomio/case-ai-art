@@ -1,8 +1,0 @@
-.echarts-spin {
-    position: absolute;
-    left: 0;
-    top: 50%;
-}
-.echarts-spin .ant-spin-dot {
-    margin-top: -0.5em;
-}
