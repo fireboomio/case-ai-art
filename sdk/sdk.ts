@@ -1,4 +1,4 @@
-import { buildQuery, buildMutation, uploadFile, setAuthHeader, setBaseUrl, getBaseUrl } from './request'
+import { buildQuery, buildMutation, uploadFile, setBaseUrl, getBaseUrl } from './request'
 import type { CreateOnePointRecordResponse,CreateOnePointRecordInput,DeleteOneArtWorkResponse,DeleteOneArtWorkInput,FindOneAppUserResponse,FindOneAppUserInput,GeneratePictureWithAIResponse,GeneratePictureWithAIInput,GetAppUserListResponse,GetAppUserListInput,GetArtWorkDetailResponse,GetArtWorkDetailInput,GetArtWorkListResponse,GetArtWorkListInput,GetCountResponse,GetDraftItemsResponse,GetDraftItemsInput,GetMyAlbumResponse,GetMyAlbumInput,GetMyDraftsResponse,GetMyDraftsInput,GetMyLikedResponse,GetMyLikedInput,GetMyPointRecordsResponse,GetMyPointRecordsInput,GetMyPublicAlbumResponse,GetMyPublicAlbumInput,GetOneAppUserResponse,GetOneAppUserInput,GetTodayCountResponse,GetTodayCountInput,GetUserinfoResponse,GetWorksByHotResponse,GetWorksByHotInput,GetWorksByNewestResponse,GetWorksByNewestInput,GetWorksByRecommendResponse,GetWorksByRecommendInput,LikeOneArtWorkResponse,LikeOneArtWorkInput,MoveDraftToAlbumResponse,MoveDraftToAlbumInput,PublishMyArtWorkResponse,PublishMyArtWorkInput,QueryStatisticResponse,RecordMyInviterResponse,RecordMyInviterInput,UnlikeOneArtWorkResponse,UnlikeOneArtWorkInput,UsePointsResponse,UsePointsInput } from "./models";
 
 setBaseUrl('http://127.0.0.1:9991')
@@ -43,6 +43,10 @@ export default {
     GetWorksByNewest: buildQuery<GetWorksByNewestResponse ,GetWorksByNewestInput>('/operations/GetWorksByNewest'),
     GetWorksByRecommend: buildQuery<GetWorksByRecommendResponse ,GetWorksByRecommendInput>('/operations/GetWorksByRecommend'),
     QueryStatistic: buildQuery<QueryStatisticResponse>('/operations/QueryStatistic'),
+  },
+
+  liveQuery: {
+
   },
 
   mutation: {

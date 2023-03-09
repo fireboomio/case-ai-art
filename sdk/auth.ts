@@ -3,11 +3,12 @@ import { setAuthHeader } from './request'
 
 let authing: Authing | null = null
 let poolName: string | null = null
+let authAppId: string | null = null
 
 export default {
   async init(options: AuthingOptions & { poolName: string }) {
     poolName = options.poolName
-    const authAppId = options.appId
+    authAppId = options.appId
     authing = new Authing(options)
     const [err, res] = await authing.getLoginState()
     if (res && res.access_token) {
