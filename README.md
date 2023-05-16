@@ -1085,9 +1085,11 @@ query QueryStatistic {
 rsync -avr  --exclude 'node_modules' --exclude 'fireboom' ./* fb-demo:/app/fb-art
 ```
 
-rds `mysql://fb:Ex5faesh!@rm-bp1he25898l8luov57o.mysql.rds.aliyuncs.com/fb_test98`
+rds `mysql://fb:Ex5faeah!@rm-bp1he25898l8luov571.mysql.rds.aliyuncs.com/fb_test98`
 
 本地 `mysql://root:fb-art@localhost:3306/art`
+
+*上述地址仅做演示，请根据实际环境修改*
 
 ### 5.2 Fireboom 生产环境启动
 
